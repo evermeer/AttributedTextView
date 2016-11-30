@@ -50,6 +50,7 @@
 		7F652A7E1DEE09E900A1E61F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F652A811DEE09E900A1E61F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F652A831DEE09E900A1E61F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FD880471DEF968500D299E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7FDAE1351DEF192A00CB46B6 /* Sample1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sample1.png; sourceTree = "<group>"; };
 		7FDAE1361DEF192A00CB46B6 /* Sample2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sample2.png; sourceTree = "<group>"; };
 		7FDAE1371DEF192A00CB46B6 /* Sample3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sample3.png; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 				7F652A761DEE09E900A1E61F /* Demo */,
 				7FDAE1341DEF192A00CB46B6 /* Screenshots */,
 				3549BB061DA387DB00C63030 /* Products */,
+				7FD880461DEF968400D299E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +160,14 @@
 				7F652A831DEE09E900A1E61F /* Info.plist */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		7FD880461DEF968400D299E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FD880471DEF968500D299E1 /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7FDAE1341DEF192A00CB46B6 /* Screenshots */ = {

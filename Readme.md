@@ -11,7 +11,6 @@
 [![Version](https://img.shields.io/cocoapods/v/AttributedTextView.svg?style=flat)](http://cocoadocs.org/docsets/AttributedTextView)
 [![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![CocoaPods compatible](https://img.shields.io/cocoapods/v/AttributedTextView.svg)](https://cocoapods.org/pods/AttributedTextView)
 [![Language](https://img.shields.io/badge/language-swift 3-f48041.svg?style=flat)](https://developer.apple.com/swift)
 [![Platform](https://img.shields.io/cocoapods/p/AttributedTextView.svg?style=flat)](http://cocoadocs.org/docsets/AttributedTextView)
 [![License](https://img.shields.io/cocoapods/l/AttributedTextView.svg?style=flat)](http://cocoadocs.org/docsets/AttributedTextView)
