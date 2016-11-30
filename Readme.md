@@ -34,7 +34,7 @@ See the demo app and the playground for detailed information how to use Attribut
 
 ## Requirements
 
-- iOS 8.0+ / Mac OS X 10.10+ / tvOS 9.0+ / watchOS 2.0+
+- iOS 8.0+ 
 - Xcode 8.0+
 
 ## Installation
