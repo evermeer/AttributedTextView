@@ -5,7 +5,7 @@
  -->
 [![Build Status](https://travis-ci.org/evermeer/AttributedTextView.svg?style=flat)](https://travis-ci.org/evermeer/AttributedTextView)
 [![Issues](https://img.shields.io/github/issues-raw/evermeer/AttributedTextView.svg?style=flat)](https://github.com/evermeer/AttributedTextView/issues)
-[![Documentation](https://img.shields.io/badge/documented-97%-green.svg?style=flat)](http://cocoadocs.org/docsets/AttributedTextView)
+[![Documentation](https://img.shields.io/badge/documented-94%-green.svg?style=flat)](http://cocoadocs.org/docsets/AttributedTextView)
 [![Stars](https://img.shields.io/github/stars/evermeer/AttributedTextView.svg?style=flat)](https://github.com/evermeer/AttributedTextView/stargazers)
 
 [![Version](https://img.shields.io/cocoapods/v/AttributedTextView.svg?style=flat)](http://cocoadocs.org/docsets/AttributedTextView)
