@@ -266,7 +266,7 @@ public extension String {
     /**
      Find the all mentions (words beginning with @)
      */
-    open var matchMentions: Attributer {
+    public var matchMentions: Attributer {
         get {
             return attributer.matchMentions
         }
@@ -286,7 +286,7 @@ public extension String {
      
      -parameter pattern: The regex pattern.
      */
-    open func matchPattern(_ pattern: String) -> Attributer {
+    public func matchPattern(_ pattern: String) -> Attributer {
         return attributer.matchPattern(pattern)
     }
     

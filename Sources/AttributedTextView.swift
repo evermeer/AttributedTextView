@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Foundation
 
 open class AttributedTextView: UITextView, UITextViewDelegate {
 

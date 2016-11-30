@@ -687,7 +687,7 @@ public func + (left: Attributer, right: Attributer) -> Attributer {
  Helper extension for converting a NSRange to a Range<String.Index>
  */
 public extension String {
-    open func range(from nsRange: NSRange) -> Range<String.Index>? {
+    public func range(from nsRange: NSRange) -> Range<String.Index>? {
         guard
             let from16 = utf16.index(utf16.startIndex, offsetBy: nsRange.location, limitedBy: utf16.endIndex),
             let to16 = utf16.index(from16, offsetBy: nsRange.length, limitedBy: utf16.endIndex),
