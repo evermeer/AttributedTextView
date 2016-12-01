@@ -27,8 +27,8 @@ Easiest way to create an attributed UITextView with support for multiple links.
 See the demo app and the playground for detailed information how to use AttributedTextView
 
 - [Requirements](#requirements)
-- [Installation](#installation)
 - [Usage](#usage)
+- [Installation](#installation)
 - [License](#license)
 - [My other libraries](#My-other-libraries)
 
@@ -36,111 +36,6 @@ See the demo app and the playground for detailed information how to use Attribut
 
 - iOS 8.0+ 
 - Xcode 8.0+
-
-## Installation
-
-### CocoaPods
-
-[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
-
-```bash
-$ gem install cocoapods
-```
-
-> CocoaPods 1.1.0+ is required to build AttributedTextView 0.1.0+.
-
-To integrate AttributedTextView into your Xcode project using CocoaPods, specify it in your `Podfile`:
-
-```ruby
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
-use_frameworks!
-
-pod 'AttributedTextView', '~> 0.1.0'
-```
-
-Then, run the following command:
-
-```bash
-$ pod install
-```
-
-### Carthage
-
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that automates the process of adding frameworks to your Cocoa application.
-
-You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
-
-```bash
-$ brew update
-$ brew install carthage
-```
-
-To integrate AttributedTextView into your Xcode project using Carthage, specify it in your `Cartfile`:
-
-```ogdl
-github "AttributedTextView/AttributedTextView" ~> 0.1.0
-```
-### Swift Package Manager
-
-To use AttributedTextView as a [Swift Package Manager](https://swift.org/package-manager/) package just add the following in your Package.swift file.
-
-``` swift
-import PackageDescription
-
-let package = Package(
-    name: "HelloAttributedTextView",
-    dependencies: [
-        .Package(url: "https://github.com/evermeer/AttributedTextView.git", "0.1.0")
-    ]
-)
-```
-
-### Manually
-
-If you prefer not to use either of the aforementioned dependency managers, you can integrate AttributedTextView into your project manually.
-
-#### Git Submodules
-
-- Open up Terminal, `cd` into your top-level project directory, and run the following command "if" your project is not initialized as a git repository:
-
-```bash
-$ git init
-```
-
-- Add AttributedTextView as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
-
-```bash
-$ git submodule add https://github.com/evermeer/AttributedTextView.git
-$ git submodule update --init --recursive
-```
-
-- Open the new `AttributedTextView` folder, and drag the `AttributedTextView.xcodeproj` into the Project Navigator of your application's Xcode project.
-
-    > It should appear nested underneath your application's blue project icon. Whether it is above or below all the other Xcode groups does not matter.
-
-- Select the `AttributedTextView.xcodeproj` in the Project Navigator and verify the deployment target matches that of your application target.
-- Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
-- In the tab bar at the top of that window, open the "General" panel.
-- Click on the `+` button under the "Embedded Binaries" section.
-- You will see two different `AttributedTextView.xcodeproj` folders each with two different versions of the `AttributedTextView.framework` nested inside a `Products` folder.
-
-    > It does not matter which `Products` folder you choose from.
-
-- Select the `AttributedTextView.framework`.
-
-- And that's it!
-
-> The `AttributedTextView.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
-
-#### Embeded Binaries
-
-- Download the latest release from https://github.com/evermeer/AttributedTextView/releases
-- Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
-- In the tab bar at the top of that window, open the "General" panel.
-- Click on the `+` button under the "Embedded Binaries" section.
-- Add the downloaded `AttributedTextView.framework`.
-- And that's it!
 
 ## Usage
 
@@ -251,6 +146,111 @@ The decorate function can then look something like this:
         return b
     }
 ```
+
+## Installation
+
+### CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+> CocoaPods 1.1.0+ is required to build AttributedTextView 0.1.0+.
+
+To integrate AttributedTextView into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+
+pod 'AttributedTextView', '~> 0.1.0'
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
+
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that automates the process of adding frameworks to your Cocoa application.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate AttributedTextView into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "AttributedTextView/AttributedTextView" ~> 0.1.0
+```
+### Swift Package Manager
+
+To use AttributedTextView as a [Swift Package Manager](https://swift.org/package-manager/) package just add the following in your Package.swift file.
+
+``` swift
+import PackageDescription
+
+let package = Package(
+name: "HelloAttributedTextView",
+dependencies: [
+.Package(url: "https://github.com/evermeer/AttributedTextView.git", "0.1.0")
+]
+)
+```
+
+### Manually
+
+If you prefer not to use either of the aforementioned dependency managers, you can integrate AttributedTextView into your project manually.
+
+#### Git Submodules
+
+- Open up Terminal, `cd` into your top-level project directory, and run the following command "if" your project is not initialized as a git repository:
+
+```bash
+$ git init
+```
+
+- Add AttributedTextView as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
+
+```bash
+$ git submodule add https://github.com/evermeer/AttributedTextView.git
+$ git submodule update --init --recursive
+```
+
+- Open the new `AttributedTextView` folder, and drag the `AttributedTextView.xcodeproj` into the Project Navigator of your application's Xcode project.
+
+> It should appear nested underneath your application's blue project icon. Whether it is above or below all the other Xcode groups does not matter.
+
+- Select the `AttributedTextView.xcodeproj` in the Project Navigator and verify the deployment target matches that of your application target.
+- Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
+- In the tab bar at the top of that window, open the "General" panel.
+- Click on the `+` button under the "Embedded Binaries" section.
+- You will see two different `AttributedTextView.xcodeproj` folders each with two different versions of the `AttributedTextView.framework` nested inside a `Products` folder.
+
+> It does not matter which `Products` folder you choose from.
+
+- Select the `AttributedTextView.framework`.
+
+- And that's it!
+
+> The `AttributedTextView.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
+
+#### Embeded Binaries
+
+- Download the latest release from https://github.com/evermeer/AttributedTextView/releases
+- Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
+- In the tab bar at the top of that window, open the "General" panel.
+- Click on the `+` button under the "Embedded Binaries" section.
+- Add the downloaded `AttributedTextView.framework`.
+- And that's it!
 
 ## License
 

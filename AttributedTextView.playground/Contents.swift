@@ -16,8 +16,8 @@ textView1.attributer =
     .append("evict.nl").makeInteract { _ in
         UIApplication.shared.open(URL(string: "http://evict.nl")!, options: [:], completionHandler: { completed in })
     }.underline
-    .append(" for testing links. ").black
-    .append("Next test").underline.makeInteract { _ in
+    + " for testing links. ".black
+    + "Next test".underline.makeInteract { _ in
         print("NEXT")
     }
     .all.font(UIFont(name: "SourceSansPro-Regular", size: 16))
