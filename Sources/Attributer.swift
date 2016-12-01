@@ -12,11 +12,25 @@ import UIKit
  */
 open class Attributer {
     
-    // State of the Attributer
+
+    /**
+     You can get the final NSMutableAttributedString from here
+     */
+    
     open var string: NSMutableAttributedString
+    /**
+     Used to set the link color on the UITextView
+     */
     public var linkColor: UIColor?
 
+    /**
+     Save all the callbacks (from the .makeInteract)
+     */
     fileprivate var urlCallbacks: [String : ((_ link: String) -> ())] = [:]
+    
+    /**
+     The current active ranges that will be influenced by all functions.
+     */
     fileprivate var ranges: [NSRange] = []
     
     /**
