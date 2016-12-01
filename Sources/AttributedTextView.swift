@@ -7,6 +7,10 @@
 
 import UIKit
 
+/**
+ Set this class as the 'Custom Class' when you add a UITextView in the interfacebuilder. 
+ Use the attributer property for setting the attributed text.
+ */
 open class AttributedTextView: UITextView, UITextViewDelegate {
 
     
@@ -35,6 +39,9 @@ open class AttributedTextView: UITextView, UITextViewDelegate {
         }
     }
 
+    /**
+     If you manually set the delegate on the AttributedTextView, then it will set this property instead of the actual delegate. The actual delegate will be set to this class itself for handling the interactions on the links. events will be forwarded to the _delegate.
+     */
     public var _delegate: UITextViewDelegate?
     /**
      Delegate that can be set for forwarding events from the UITextView

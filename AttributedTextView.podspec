@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
  s.name = 'AttributedTextView'
- s.version = '0.1.1'
+ s.version = '0.1.2'
  s.license = { :type => "MIT", :file => "LICENSE" }
  s.summary = 'Easiest way to create an attributed UITextView with support for multiple links'
- s.homepage = 'http://evict.nl'
+ s.homepage = 'https://github.com/evermeer/AttributedTextView'
  s.social_media_url = 'https://twitter.com/evermeer'
  s.authors = { "Edwin Vermeer" => "edwin@evict.nl" }
  s.source = { :git => "https://github.com/evermeer/AttributedTextView.git", :tag => "v"+s.version.to_s }

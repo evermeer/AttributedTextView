@@ -687,6 +687,11 @@ public func + (left: Attributer, right: Attributer) -> Attributer {
  Helper extension for converting a NSRange to a Range<String.Index>
  */
 public extension String {
+    /**
+     Helper extension for converting a NSRange to a Range<String.Index>
+     
+     -parameter nsRange: The NSRange that needs to be converted
+     */
     public func range(from nsRange: NSRange) -> Range<String.Index>? {
         guard
             let from16 = utf16.index(utf16.startIndex, offsetBy: nsRange.location, limitedBy: utf16.endIndex),
@@ -702,6 +707,11 @@ public extension String {
  Helper extension for creating a UIColor based on a hex value
  */
 public extension UIColor {
+    /**
+     Helper extension for creating a UIColor based on a hex value
+
+     -parameter hex: The hex value (like 0xffffff) that wil be used for the color
+     */
     public convenience init(hex: Int) {
         let red = CGFloat((hex & 0xff0000) >> 16) / 255.0
         let green = CGFloat((hex & 0x00ff00) >> 8) / 255.0
