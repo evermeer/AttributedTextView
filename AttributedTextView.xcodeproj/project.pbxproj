@@ -30,6 +30,7 @@
 		7F652A7F1DEE09E900A1E61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F652A7E1DEE09E900A1E61F /* Assets.xcassets */; };
 		7F652A821DEE09E900A1E61F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F652A801DEE09E900A1E61F /* LaunchScreen.storyboard */; };
 		7F652A871DEE0BF300A1E61F /* AttributedTextView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3549BB211DA389CD00C63030 /* AttributedTextView.framework */; };
+		7FD407B01E0C280E00AEBF1B /* Sample5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FD407AF1E0C280E00AEBF1B /* Sample5.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		7F652A7E1DEE09E900A1E61F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F652A811DEE09E900A1E61F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F652A831DEE09E900A1E61F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FD407AF1E0C280E00AEBF1B /* Sample5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sample5.png; sourceTree = "<group>"; };
 		7FD880471DEF968500D299E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7FDAE1351DEF192A00CB46B6 /* Sample1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sample1.png; sourceTree = "<group>"; };
 		7FDAE1361DEF192A00CB46B6 /* Sample2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sample2.png; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				7FDAE1361DEF192A00CB46B6 /* Sample2.png */,
 				7FDAE1371DEF192A00CB46B6 /* Sample3.png */,
 				7FDAE1381DEF192A00CB46B6 /* Sample4.png */,
+				7FD407AF1E0C280E00AEBF1B /* Sample5.png */,
 			);
 			path = Screenshots;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3549BB561DA38A5E00C63030 /* Info-tvOS.plist in Resources */,
+				7FD407B01E0C280E00AEBF1B /* Sample5.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

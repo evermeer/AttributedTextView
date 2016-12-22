@@ -19,7 +19,8 @@ class ViewController: UIViewController {
         ("coloring and aditional attributes", showSample2(self)),
         ("single or multiple matches", showSample3(self)),
         ("hashtags and mentions", showSample4(self)),
-        ("creating your own composit style", showSample5(self))
+        ("creating your own composit style", showSample5(self)),
+        ("just some more styles", showSample6(self))
     ]
 
     // For more basic tests about how to use AttributedTextView, see the playground
@@ -99,6 +100,20 @@ class ViewController: UIViewController {
     func showSample5() {
         attributedTextView.attributer = decorate(4) { content in return content
             + "This is our custom title".myTitle
+        }
+    }
+    
+    // just some other styles
+    func showSample6() {
+        attributedTextView.attributer = decorate(5) { content in return (content
+            + ("test stroke".strokeWidth(2).strokeColor(UIColor.red)
+                .append("test stroke 2\n").strokeWidth(2).strokeColor(UIColor.blue)
+                .append("test strikethrough").strikethrough(2).strikethroughColor(UIColor.red)
+                .append(" test strikethrough 2\n").strikethrough(2).strikethroughColor(UIColor.yellow)
+                + "letterpress ".letterpress
+                + " obliquenes\n".obliqueness(0.4).backgroundColor(UIColor.cyan)
+                + "expansion\n".expansion(0.8)
+            ).all.size(24))
         }
     }
 }
