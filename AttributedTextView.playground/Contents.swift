@@ -63,5 +63,24 @@ textView1.attributer = "link to http://evict.nl and https://github.com/evermeer"
     }
 attributedText = textView1.attributedText // View the details for this -->
 
+textView1.attributer =  (
+    "test stroke".strokeWidth(2).strokeColor(UIColor.red)
+    + "test stroke 2\n".strokeWidth(2).strokeColor(UIColor.blue)
+    + "test strikethrough".strikethrough(2).strikethroughColor(UIColor.red)
+    + " test strikethrough 2\n".strikethrough(2).strikethroughColor(UIColor.yellow)
+    + "letterpress ".letterpress
+    + " obliquenes\n".obliqueness(0.4).backgroundColor(UIColor.cyan)
+    + "expansion\n".expansion(0.8)
+).all.size(24)
+
+attributedText = textView1.attributedText // View the details for this -->
+
+textView1.attributer = ("".attributer
+    + "ligature fi and fl = ".ligature(0) + "fi and fl\n".ligature(1)
+    + "writingDirection".writingDirection([3])
+).all.fontName("Hoefler Text").size(24)
+attributedText = textView1.attributedText // View the details for this -->
+
+
 
 

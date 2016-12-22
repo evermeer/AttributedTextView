@@ -508,4 +508,111 @@ public extension String {
         return attributer.strikethrough(number)
     }
 
+    
+    /**
+     Set the striketrhough color for the active range(es)
+     
+     -parameter color: The color of the striketrhough.
+     */
+    public func strikethroughColor(_ color: UIColor) -> Attributer {
+        return attributer.strikethroughColor(color)
+    }
+    
+    /**
+     Set the stroke color
+     
+     -parameter color: The stroke color.
+     */
+    public func strokeColor(_ color: UIColor) -> Attributer {
+        return attributer.strokeColor(color)
+    }
+    
+    /**
+     Set the stroke width
+     
+     -parameter number: The stroke width.
+     */
+    public func strokeWidth(_ number: NSNumber) -> Attributer {
+        return attributer.strokeWidth(number)
+    }
+    
+    /**
+     Set the style to letterpress
+     */
+    public var letterpress: Attributer {
+        get {
+            return attributer.letterpress
+        }
+    }
+    
+    /**
+     Set the obliqueness
+     
+     -parameter number: The obliqueness.
+     */
+    public func obliqueness(_ number: NSNumber) -> Attributer {
+        return attributer.obliqueness(number)
+    }
+    
+    /**
+     Set the expansion
+     
+     -parameter number: The expansion.
+     */
+    public func expansion(_ number: NSNumber) -> Attributer {
+        return attributer.expansion(number)
+    }
+    
+    /*
+     "In iOS, horizontal text is always used and specifying a different value is undefined."
+    
+     public func verticalGlyphForm(_ number: NSNumber) -> Attributer {
+        return attributer.verticalGlyphForm(number)
+    }
+    */
+    
+    /**
+     Set the backgroundColor
+     
+     -parameter color: The color.
+     */
+    public func backgroundColor(_ color: UIColor) -> Attributer {
+        return attributer.backgroundColor(color)
+    }
+    
+    /**
+     Set the ligature
+     
+     -parameter number: The ligature.
+     */
+    public func ligature(_ number: NSNumber) -> Attributer {
+        return attributer.ligature(number)
+    }
+    
+    /**
+     Set the attachment
+     
+     -parameter attachment: The attachment.
+     */
+    public func attachment(_ attachment: NSTextAttachment) -> Attributer {
+        return attributer.attachment(attachment)
+    }
+    
+    /**
+     Set the writing directions
+     
+     -parameter directions: The directions.
+     */
+    public func writingDirection(_ directions: [NSNumber]) -> Attributer {
+        return attributer.writingDirection(directions)
+    }
+    
+    /**
+     Set the paragraph
+     
+     -parameter paragraph: The paragraph style.
+     */
+    public func paragraph(_ paragraph: NSParagraphStyle) -> Attributer {
+        return attributer.paragraph(paragraph)
+    }
 }

@@ -98,6 +98,25 @@ textView1.attributer = "@test: What #hashtags do we have in @evermeer #Atributed
 
 ![animated](https://github.com/evermeer/AttributedTextView/blob/master/Screenshots/Sample4.png?raw=true)
 
+
+Some other text formating samples:
+
+```
+textView1.attributer =  (
+    "test stroke".strokeWidth(2).strokeColor(UIColor.red)
+    + "test stroke 2\n".strokeWidth(2).strokeColor(UIColor.blue)
+    + "test strikethrough".strikethrough(2).strikethroughColor(UIColor.red)
+    + " test strikethrough 2\n".strikethrough(2).strikethroughColor(UIColor.yellow)
+    + "letterpress ".letterpress
+    + " obliquenes\n".obliqueness(0.4).backgroundColor(UIColor.cyan)
+    + "expansion\n".expansion(0.8)
+    ).all.size(24)
+```
+
+![animated](https://github.com/evermeer/AttributedTextView/blob/master/Screenshots/Sample5.png?raw=true)
+
+
+
 ### Use the attributedText functionality on a UILabel
 You can also use the Attributer for your UILabel. You only can't use the makeInteract function:
 

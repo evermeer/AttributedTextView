@@ -650,17 +650,117 @@ open class Attributer {
     open func strikethrough(_ number: NSNumber) -> Attributer {
         return applyAttributes(NSStrikethroughStyleAttributeName, value: number)
     }
-
-    //TODO:
-    //NSStrikethroughColorAttributeName -> UIColor
-    //NSStrokeColorAttributeName -> UIColor
-    //NSStrokeWidthAttributeName --> NSNumber
-    //NSTextEffectAttributeName --> NSString
-    //NSObliquenessAttributeName -> NSNumber
-    //NSExpansionAttributeName -> NSNumber
-    //NSVerticalGlyphFormAttributeName -> NSNumber
-    //NSBackgroundColorAttributeName -> UIColor
     
+    /**
+     Set the striketrhough color
+     
+     -parameter color: The strikethrough color.
+     */
+    open func strikethroughColor(_ color: UIColor) -> Attributer {
+        return applyAttributes(NSStrikethroughColorAttributeName, value: color)
+    }
+    
+    /**
+     Set the stroke color
+     
+     -parameter color: The stroke color.
+     */
+    open func strokeColor(_ color: UIColor) -> Attributer {
+        return applyAttributes(NSStrokeColorAttributeName, value: color)
+    }
+
+    /**
+     Set the stroke width
+     
+     -parameter number: The stroke width.
+     */
+    open func strokeWidth(_ number: NSNumber) -> Attributer {
+        return applyAttributes(NSStrokeWidthAttributeName, value: number)
+    }
+
+    /**
+     Set the style to letterpress
+     */
+    open var letterpress: Attributer {
+        get {
+            return applyAttributes(NSTextEffectAttributeName, value: NSTextEffectLetterpressStyle as NSString)
+        }
+    }
+    
+    /**
+     Set the obliqueness
+
+     -parameter number: The obliqueness.
+     */
+    open func obliqueness(_ number: NSNumber) -> Attributer {
+        return applyAttributes(NSObliquenessAttributeName, value: number)
+    }
+
+    /**
+     Set the expansion
+     
+     -parameter number: The expansion.
+     */
+    open func expansion(_ number: NSNumber) -> Attributer {
+        return applyAttributes(NSExpansionAttributeName, value: number)
+    }
+
+    /**
+     "In iOS, horizontal text is always used and specifying a different value is undefined."
+     
+     Set the vertical Glyph form
+     
+     -parameter number: The vertical glyph form.
+    open func verticalGlyphForm(_ number: NSNumber) -> Attributer {
+        return applyAttributes(NSVerticalGlyphFormAttributeName, value: number)
+    }
+     */
+
+    /**
+     Set the backgroundColor
+     
+     -parameter color: The color.
+     */
+    open func backgroundColor(_ color: UIColor) -> Attributer {
+        return applyAttributes(NSBackgroundColorAttributeName, value: color)
+    }
+    
+    /**
+     Set the ligature
+     
+     -parameter number: The ligature.
+     */
+    open func ligature(_ number: NSNumber) -> Attributer {
+        return applyAttributes(NSLigatureAttributeName, value: number)
+    }
+
+    /**
+     Set the attachment
+     
+     -parameter attachment: The attachment.
+     */
+    open func attachment(_ attachment: NSTextAttachment) -> Attributer {
+        return applyAttributes(NSAttachmentAttributeName, value: attachment)
+    }
+    
+    /**
+     Set the writing directions
+     
+     -parameter directions: The directions.
+     */
+    open func writingDirection(_ directions: [NSNumber]) -> Attributer {
+        return applyAttributes(NSWritingDirectionAttributeName, value: directions as AnyObject)
+    }
+
+    /**
+     Set the paragraph
+     
+     -parameter paragraph: The paragraph style.
+     */
+    open func paragraph(_ paragraph: NSParagraphStyle) -> Attributer {
+        return applyAttributes(NSParagraphStyleAttributeName, value: paragraph)
+    }
+
     
     // MARK: - Private
     
