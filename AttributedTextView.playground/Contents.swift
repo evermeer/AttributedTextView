@@ -64,23 +64,26 @@ textView1.attributer = "link to http://evict.nl and https://github.com/evermeer"
 attributedText = textView1.attributedText // View the details for this -->
 
 textView1.attributer =  (
-    "test stroke".strokeWidth(2).strokeColor(UIColor.red)
-    + "test stroke 2\n".strokeWidth(2).strokeColor(UIColor.blue)
+    "test stroke".strokeWidth(2).strokeColor(UIColor.red).paragraphAlignCenter.paragraphApplyStyling
+    + "test stroke\n".strokeWidth(2).strokeColor(UIColor.blue)
     + "test strikethrough".strikethrough(2).strikethroughColor(UIColor.red)
     + " test strikethrough 2\n".strikethrough(2).strikethroughColor(UIColor.yellow)
-    + "letterpress ".letterpress
-    + " obliquenes\n".obliqueness(0.4).backgroundColor(UIColor.cyan)
-    + "expansion\n".expansion(0.8)
+    + "expansion\n".expansion(0.8).paragraphAlignRight.paragraphApplyStyling
+    + ("letterpress ".letterpress
+    + " obliquenes\n".obliqueness(0.4).backgroundColor(UIColor.cyan)).paragraphAlignLeft.paragraphApplyStyling
 ).all.size(24)
-
 attributedText = textView1.attributedText // View the details for this -->
 
-textView1.attributer = ("".attributer
-    + "ligature fi and fl = ".ligature(0) + "fi and fl\n".ligature(1)
-    + "writingDirection".writingDirection([3])
+textView1.attributer = (
+    "ligature fi and fl = ".ligature(0) + "fi and fl\n".ligature(1)
+    + "0123456789".writingDirection([3])
 ).all.fontName("Hoefler Text").size(24)
 attributedText = textView1.attributedText // View the details for this -->
 
+textView1.attributer = (
+    "The quick brown fox jumps over the lazy dog.\nPack my box with five dozen liquor jugs.\nSeveral fabulous dixieland jazz groups played with quick tempo.".paragraphLineHeightMultiple(5).paragraphLineSpacing(6).paragraphMinimumLineHeight(15).paragraphMaximumLineHeight(50).paragraphLineSpacing(10).paragraphLineBreakModeWordWrapping.paragraphFirstLineHeadIndent(20).paragraphApplyStyling
+    ).all.size(12)
+attributedText = textView1.attributedText // View the details for this -->
 
 
 

@@ -39,7 +39,13 @@ See the demo app and the playground for detailed information how to use Attribut
 
 ## Usage
 
-In interfacebuilder put an UITextView on the canvas and set the base class to AttributedTextView. In the samples below we have set the referencing outlet to the property textView1.
+### General usage
+In interfacebuilder put an UITextView on the canvas and set the base class to AttributedTextView and create a referencing outlet to the a property in  your viewController. In the samples below we have called this property textView1. Always assign to the attributer property when you want to set something.
+
+### Paragraph styling
+You do have to be aware that the paragraph functions will only be applied after calling the .paragraphApplyStyling function. On start the paragraph styling will use default styling. After each range change (what happens after .all, .match* or .append) the styling will be reset to the default.
+
+### Sample code
 
 Here is a sample of some basic functions:
 

@@ -355,7 +355,7 @@ public extension String {
      
      -parameter scheme: The scheme that will be added in front of the link
      */
-    @available(*, deprecated, message: "use SwiftyTextView with makeInteract: instead")
+    @available(*, deprecated, message: "use AttributedTextView with makeInteract: instead")
     public func makeInteractWithURLforScheme(_ scheme: String) -> Attributer {
         return attributer.makeInteractWithURLforScheme(scheme)
     }
@@ -607,12 +607,242 @@ public extension String {
         return attributer.writingDirection(directions)
     }
     
+    
+    // MARK: - Paragraph functions
+    
     /**
      Set the paragraph
      
      -parameter paragraph: The paragraph style.
      */
-    public func paragraph(_ paragraph: NSParagraphStyle) -> Attributer {
+    public func paragraph(_ paragraph: NSMutableParagraphStyle) -> Attributer {
         return attributer.paragraph(paragraph)
     }
+    
+    /**
+     Apply the paragraph stylings that have been set by all the paragraph functions
+     */
+    public var paragraphApplyStyling: Attributer {
+        get {
+            return attributer.paragraphApplyStyling
+        }
+    }
+    
+    /**
+     Align the paragraph in the center
+     */
+    public var paragraphAlignCenter: Attributer {
+        get {
+            return attributer.paragraphAlignCenter
+        }
+    }
+    
+    /**
+     Align the paragraph right
+     */
+    public var paragraphAlignRight: Attributer {
+        get {
+            return attributer.paragraphAlignRight
+        }
+    }
+    
+    /**
+     Align the paragraph left
+     */
+    public var paragraphAlignLeft: Attributer {
+        get {
+            return attributer.paragraphAlignLeft
+        }
+    }
+    
+    /**
+     Align the paragraph justified
+     */
+    public var paragraphAlignJustified: Attributer {
+        get {
+            return attributer.paragraphAlignJustified
+        }
+    }
+    
+    /**
+     Align the paragraph Natural
+     */
+    public var paragraphAlignNatural: Attributer {
+        get {
+            return attributer.paragraphAlignNatural
+        }
+    }
+    
+    /**
+     Set the paragraph line spacing
+     */
+    public func paragraphLineSpacing(_ number: CGFloat) -> Attributer {
+        return attributer.paragraphLineSpacing(number)
+    }
+    
+    /**
+     Set the paragraph spacing
+     */
+    public func paragraphSpacing(_ number: CGFloat) -> Attributer {
+        return attributer.paragraphSpacing(number)
+    }
+    
+    /**
+     Set the paragraph first line head indent
+     */
+    public func paragraphFirstLineHeadIndent(_ number: CGFloat) -> Attributer {
+        return attributer.paragraphFirstLineHeadIndent(number)
+    }
+    
+    /**
+     Set the paragraph head indent
+     */
+    public func paragraphHeadIndent(_ number: CGFloat) -> Attributer {
+        return attributer.paragraphHeadIndent(number)
+    }
+    
+    /**
+     Set the paragraph tail indent
+     */
+    public func paragraphTailIndent(_ number: CGFloat) -> Attributer {
+        return attributer.paragraphTailIndent(number)
+    }
+    
+    /**
+     Set the paragraph linebreak mode to word wrapping
+     */
+    public var paragraphLineBreakModeWordWrapping: Attributer {
+        get {
+            return attributer.paragraphLineBreakModeWordWrapping
+        }
+    }
+    
+    /**
+     Set the paragraph linebreak mode to character wrapping
+     */
+    public var paragraphLineBreakModeCharWrapping: Attributer {
+        get {
+            return attributer.paragraphLineBreakModeCharWrapping
+        }
+    }
+    
+    /**
+     Set the paragraph linebreak mode to clipping
+     */
+    public var paragraphLineBreakModeClipping: Attributer {
+        get {
+            return attributer.paragraphLineBreakModeClipping
+        }
+    }
+    
+    /**
+     Set the paragraph linebreak mode to truncate head
+     */
+    public var paragraphLineBreakTruncatingHead: Attributer {
+        get {
+            return attributer.paragraphLineBreakTruncatingHead
+        }
+    }
+    
+    /**
+     Set the paragraph linebreak mode to truncate tail
+     */
+    public var paragraphLineBreakTruncatingTail: Attributer {
+        get {
+            return attributer.paragraphLineBreakTruncatingTail
+        }
+    }
+    
+    /**
+     Set the paragraph linebreak mode to truncate midle
+     */
+    public var paragraphLineBreakTruncatingMiddle: Attributer {
+        get {
+            return attributer.paragraphLineBreakTruncatingMiddle
+        }
+    }
+    
+    /**
+     Set the paragraph minimum line height
+     */
+    public func paragraphMinimumLineHeight(_ number: CGFloat) -> Attributer {
+        return attributer.paragraphMinimumLineHeight(number)
+    }
+    
+    /**
+     Set the paragraph maximum line height
+     */
+    public func paragraphMaximumLineHeight(_ number: CGFloat) -> Attributer {
+        return attributer.paragraphMaximumLineHeight(number)
+    }
+    
+    /**
+     Set the paragraph base writing direction to natural
+     */
+    public var paragraphBaseWritingDirectionNatural: Attributer {
+        get {
+            return attributer.paragraphBaseWritingDirectionNatural
+        }
+    }
+    
+    /**
+     Set the paragraph base writing direction to left to right
+     */
+    public var paragraphBaseWritingDirectionLeftToRight: Attributer {
+        get {
+            return attributer.paragraphBaseWritingDirectionLeftToRight
+        }
+    }
+    
+    /**
+     Set the paragraph base writing direction to right to left
+     */
+    public var paragraphBaseWritingDirectionRightToLeft: Attributer {
+        get {
+            return attributer.paragraphBaseWritingDirectionRightToLeft
+        }
+    }
+    
+    /**
+     Set the paragraph line hight multiple
+     */
+    public func paragraphLineHeightMultiple(_ number: CGFloat) -> Attributer {
+        return attributer.paragraphLineHeightMultiple(number)
+    }
+    
+    /**
+     Set the paragraph spacing before
+     */
+    public func paragraphSpacingBefore(_ number: CGFloat) -> Attributer {
+        return attributer.paragraphSpacingBefore(number)
+    }
+    
+    /**
+     Set the paragraph hyphenation factor
+     */
+    public func paragraphHyphenationFactor(_ number: Float) -> Attributer {
+        return attributer.paragraphHyphenationFactor(number)
+    }
+    
+    /* Someone want this?
+     @available(tvOS 7.0, *)
+     open var tabStops: [NSTextTab]!
+     
+     @available(tvOS 7.0, *)
+     open var defaultTabInterval: CGFloat
+     
+     @available(tvOS 9.0, *)
+     open var allowsDefaultTighteningForTruncation: Bool
+     
+     
+     @available(tvOS 9.0, *)
+     open func addTabStop(_ anObject: NSTextTab)
+     
+     @available(tvOS 9.0, *)
+     open func removeTabStop(_ anObject: NSTextTab)
+     
+     
+     @available(tvOS 9.0, *)
+     open func setParagraphStyle(_ obj: NSParagraphStyle)
+     */    
 }

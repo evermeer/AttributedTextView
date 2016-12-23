@@ -20,7 +20,8 @@ class ViewController: UIViewController {
         ("single or multiple matches", showSample3(self)),
         ("hashtags and mentions", showSample4(self)),
         ("creating your own composit style", showSample5(self)),
-        ("just some more styles", showSample6(self))
+        ("just some more styles", showSample6(self)),
+        ("paragraph formatting", showSample7(self))
     ]
 
     // For more basic tests about how to use AttributedTextView, see the playground
@@ -31,7 +32,7 @@ class ViewController: UIViewController {
     
     // Dynamically build the header and the previous and next links around the content
     func decorate(_ id: Int, _ builder: ((_ content: Attributer) -> Attributer)) -> Attributer {
-        var b = "Sample \(id + 1): \(samples[id].title)\n\n".red
+        var b = "Sample \(id + 1) of \(samples.count): \(samples[id].title)\n\n".red
         if id > 0  {
             b = b + "<-- previous sample\n\n".underline.makeInteract { _ in
                 self.samples[id - 1].show()
@@ -106,14 +107,23 @@ class ViewController: UIViewController {
     // just some other styles
     func showSample6() {
         attributedTextView.attributer = decorate(5) { content in return (content
-            + ("test stroke".strokeWidth(2).strokeColor(UIColor.red)
-                .append("test stroke 2\n").strokeWidth(2).strokeColor(UIColor.blue)
-                .append("test strikethrough").strikethrough(2).strikethroughColor(UIColor.red)
-                .append(" test strikethrough 2\n").strikethrough(2).strikethroughColor(UIColor.yellow)
-                + "letterpress ".letterpress
-                + " obliquenes\n".obliqueness(0.4).backgroundColor(UIColor.cyan)
-                + "expansion\n".expansion(0.8)
-            ).all.size(24))
+            + ( "test stroke".strokeWidth(2).strokeColor(UIColor.red).paragraphAlignCenter.paragraphApplyStyling
+                    .append("test stroke\n").strokeWidth(2).strokeColor(UIColor.blue)
+                    .append("test strikethrough").strikethrough(2).strikethroughColor(UIColor.red)
+                    .append(" test strikethrough\n").strikethrough(2).strikethroughColor(UIColor.yellow)
+                    + "expansion\n".expansion(0.8).paragraphAlignRight.paragraphApplyStyling
+                    + ("letterpress ".letterpress
+                        + " obliquenes\n".obliqueness(0.4).backgroundColor(UIColor.cyan)).paragraphAlignRight.paragraphApplyStyling
+                ).all.size(24)
+            )
+        }
+    }
+    
+    func showSample7() {
+        attributedTextView.attributer = decorate(6) { content in return (content
+            + ( "The quick brown fox jumps over the lazy dog.\nPack my box with five dozen liquor jugs.\nSeveral fabulous dixieland jazz groups played with quick tempo.".paragraphLineHeightMultiple(2).paragraphLineSpacing(5).paragraphMinimumLineHeight(15).paragraphMaximumLineHeight(30).paragraphLineSpacing(10).paragraphLineBreakModeWordWrapping.paragraphFirstLineHeadIndent(20).paragraphApplyStyling
+                ).all.size(12)
+            )
         }
     }
 }
