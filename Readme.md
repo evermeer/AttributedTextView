@@ -45,6 +45,27 @@ In interfacebuilder put an UITextView on the canvas and set the base class to At
 ### Paragraph styling
 You do have to be aware that the paragraph functions will only be applied after calling the .paragraphApplyStyling function. On start the paragraph styling will use default styling. After each range change (what happens after .all, .match* or .append) the styling will be reset to the default.
 
+### The active range
+Styling will always be applied on the active range. When executing a function on a string, then that complete string will become the active range. If you use .append to add an other string, then that latest string will become the active range. When using the + sign then that will replaced by an appent on 2 Attributer objects. All functions on those objects will first be performed before the append will be executed. So if you do an .all then still only one of the strings will be tha active range.
+
+For instance here all text will be size 20
+
+```
+("red".red + "blue".blue).all.size(20)
+```
+
+And here only the text blue will be size 20
+
+```
+"red".red + "blue".blue.all.size(20)
+```
+
+And like this all text will be size 20
+
+```
+"red".red.append("blue").blue.all.size(20)
+```
+
 ### Sample code
 
 Here is a sample of some basic functions:
@@ -120,6 +141,16 @@ textView1.attributer =  (
 ```
 
 ![animated](https://github.com/evermeer/AttributedTextView/blob/master/Screenshots/Sample5.png?raw=true)
+
+
+Paragraph formatting:
+
+```
+textView1.attributer = (
+    "The quick brown fox jumps over the lazy dog.\nPack my box with five dozen liquor jugs.\nSeveral fabulous dixieland jazz groups played with quick tempo.".paragraphLineHeightMultiple(5).paragraphLineSpacing(6).paragraphMinimumLineHeight(15).paragraphMaximumLineHeight(50).paragraphLineSpacing(10).paragraphLineBreakModeWordWrapping.paragraphFirstLineHeadIndent(20).paragraphApplyStyling
+    ).all.size(12)
+```
+
 
 
 
