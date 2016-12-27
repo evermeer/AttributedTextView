@@ -343,8 +343,8 @@ open class Attributer {
      
      -parameter substring: The string to search for.
      */
-    open func matchAll(_ substirng: String) -> Attributer {
-        return matchAllWithOptions(substirng)
+    open func matchAll(_ substring: String) -> Attributer {
+        return matchAllWithOptions(substring)
     }
     
     /**
