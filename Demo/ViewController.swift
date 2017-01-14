@@ -9,6 +9,7 @@
 import UIKit
 import AttributedTextView
 
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var attributedTextView: AttributedTextView!
