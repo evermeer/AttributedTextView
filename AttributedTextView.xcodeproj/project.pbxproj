@@ -30,6 +30,9 @@
 		7F652A7F1DEE09E900A1E61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F652A7E1DEE09E900A1E61F /* Assets.xcassets */; };
 		7F652A821DEE09E900A1E61F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F652A801DEE09E900A1E61F /* LaunchScreen.storyboard */; };
 		7F652A871DEE0BF300A1E61F /* AttributedTextView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3549BB211DA389CD00C63030 /* AttributedTextView.framework */; };
+		7FA506E61E695CEB003D83E7 /* AttributedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA506E51E695CEB003D83E7 /* AttributedLabel.swift */; };
+		7FA506E81E696EA2003D83E7 /* AttributedTextViewSubclassDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA506E71E696EA2003D83E7 /* AttributedTextViewSubclassDemo.swift */; };
+		7FA506EA1E696EBD003D83E7 /* AttributedLabelSubclassDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA506E91E696EBD003D83E7 /* AttributedLabelSubclassDemo.swift */; };
 		7FD407B01E0C280E00AEBF1B /* Sample5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FD407AF1E0C280E00AEBF1B /* Sample5.png */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +54,9 @@
 		7F652A7E1DEE09E900A1E61F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F652A811DEE09E900A1E61F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F652A831DEE09E900A1E61F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FA506E51E695CEB003D83E7 /* AttributedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedLabel.swift; sourceTree = "<group>"; };
+		7FA506E71E696EA2003D83E7 /* AttributedTextViewSubclassDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedTextViewSubclassDemo.swift; sourceTree = "<group>"; };
+		7FA506E91E696EBD003D83E7 /* AttributedLabelSubclassDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedLabelSubclassDemo.swift; sourceTree = "<group>"; };
 		7FD407AF1E0C280E00AEBF1B /* Sample5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sample5.png; sourceTree = "<group>"; };
 		7FD880471DEF968500D299E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7FDAE1351DEF192A00CB46B6 /* Sample1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sample1.png; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 				7F1C64761DEC722F002A1A59 /* Attributer.swift */,
 				7F1C64771DEC722F002A1A59 /* String+Attributer.swift */,
 				7F1C64781DEC722F002A1A59 /* AttributedTextView.swift */,
+				7FA506E51E695CEB003D83E7 /* AttributedLabel.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -156,6 +163,8 @@
 			children = (
 				7F652A771DEE09E900A1E61F /* AppDelegate.swift */,
 				7F652A791DEE09E900A1E61F /* ViewController.swift */,
+				7FA506E91E696EBD003D83E7 /* AttributedLabelSubclassDemo.swift */,
+				7FA506E71E696EA2003D83E7 /* AttributedTextViewSubclassDemo.swift */,
 				7F652A7B1DEE09E900A1E61F /* Main.storyboard */,
 				7F652A7E1DEE09E900A1E61F /* Assets.xcassets */,
 				7F652A801DEE09E900A1E61F /* LaunchScreen.storyboard */,
@@ -418,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA506E61E695CEB003D83E7 /* AttributedLabel.swift in Sources */,
 				7F1C64801DEC722F002A1A59 /* String+Attributer.swift in Sources */,
 				7F1C64871DEC722F002A1A59 /* AttributedTextView.swift in Sources */,
 				7F1C64791DEC722F002A1A59 /* Attributer.swift in Sources */,
@@ -459,7 +469,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F652A7A1DEE09E900A1E61F /* ViewController.swift in Sources */,
+				7FA506E81E696EA2003D83E7 /* AttributedTextViewSubclassDemo.swift in Sources */,
 				7F652A781DEE09E900A1E61F /* AppDelegate.swift in Sources */,
+				7FA506EA1E696EBD003D83E7 /* AttributedLabelSubclassDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

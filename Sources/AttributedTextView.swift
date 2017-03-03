@@ -10,11 +10,47 @@ import UIKit
 /**
  Set this class as the 'Custom Class' when you add a UITextView in the interfacebuilder. 
  Use the attributer property for setting the attributed text.
- */
-open class AttributedTextView: UITextView, UITextViewDelegate {
 
+ You can create your own textview class and use this class as it's base class. override the configureAttributedLabel function and set the self.attributer to your prefered styling. For instance self.attributer = self.text?.myHeader See the samples for how you could add your own custom property for interface builder and alsu use that.
+ */
+@IBDesignable open class AttributedTextView: UITextView, UITextViewDelegate {
+
+    // required when using @IBDesignable
+    override public init(frame: CGRect, textContainer: NSTextContainer?) {
+        super.init(frame: frame, textContainer: textContainer)
+    }
     
+    // required when using @IBDesignable
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    // Make sure configureAttributedTextView is called right after activation from the storyboard.
+    open override func awakeFromNib() {
+        super.awakeFromNib()
+        configureAttributedTextView()
+    }
+    
+    // Make sure configureAttributedTextView is called inside interfacebuilder
+    open override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        configureAttributedTextView()
+    }
+    
+    // just an override for triggering configureAttributedTextView
+    override open var text: String? {
+        didSet {
+            configureAttributedTextView()
+        }
+    }
+    
+    // Subclass AttributedTextView and override this function if you want to use easy custum controls in interface builder
+    open func configureAttributedTextView() {
+    }
+    
+    // storage variable for the Attributer
     private var _attributer: Attributer?
+
     /**
      The attributer object that will set the attributedText
      */

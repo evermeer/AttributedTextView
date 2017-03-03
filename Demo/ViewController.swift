@@ -22,7 +22,8 @@ class ViewController: UIViewController {
         ("hashtags and mentions", showSample4(self)),
         ("creating your own composit style", showSample5(self)),
         ("just some more styles", showSample6(self)),
-        ("paragraph formatting", showSample7(self))
+        ("paragraph formatting", showSample7(self)),
+        ("more paragraph formatting", showSample8(self))
     ]
 
     // For more basic tests about how to use AttributedTextView, see the playground
@@ -127,6 +128,20 @@ class ViewController: UIViewController {
             )
         }
     }
+
+    func showSample8() {
+        attributedTextView.attributer = decorate(7) { content in return (content + (
+            "The quick brown fox jumps over the lazy dog.\nPack my box with five dozen liquor jugs.\nSeveral fabulous dixieland jazz groups played with quick tempo.".brown
+                .match("brown fox").underline.makeInteract { (link) in
+                    print("TODO: open terms of user screen")
+                }
+                .match("fabulous dixieland").underline.makeInteract { (link) in
+                    print("TODO: open privacy policy")
+                }.all.paragraphAlignRight.paragraphApplyStyling
+            ))
+        }
+    }
+
 }
 
 

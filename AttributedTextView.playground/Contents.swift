@@ -96,4 +96,3 @@ attributedText = textView1.attributedText // View the details for this -->
 
 
 
-

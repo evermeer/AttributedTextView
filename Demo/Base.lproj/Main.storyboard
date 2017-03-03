@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -30,11 +30,39 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This is a website link" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="x9h-kY-xX8" customClass="AttributedTextViewSubclassDemo" customModule="Demo" customModuleProvider="target">
+                                <rect key="frame" x="16" y="427" width="343" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="FUJ-aZ-Y9i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="linkText" value="website"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="linkUrl" value="http://evict.nl"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This label has a highlighted text in the middle." lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMu-K3-dvr" customClass="AttributedLabelSubclassDemo" customModule="Demo" customModuleProvider="target">
+                                <rect key="frame" x="16" y="483" width="343" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="highlightText" value="highlighted"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kDL-ar-DFH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="16j-pS-Wst"/>
+                            <constraint firstItem="x9h-kY-xX8" firstAttribute="leading" secondItem="FMu-K3-dvr" secondAttribute="leading" id="3RL-U3-SO2"/>
+                            <constraint firstItem="x9h-kY-xX8" firstAttribute="leading" secondItem="kDL-ar-DFH" secondAttribute="leading" id="4OR-Pv-ZzT"/>
+                            <constraint firstItem="FMu-K3-dvr" firstAttribute="top" secondItem="x9h-kY-xX8" secondAttribute="bottom" constant="8" symbolic="YES" id="B7P-Hl-mas"/>
+                            <constraint firstItem="x9h-kY-xX8" firstAttribute="trailing" secondItem="kDL-ar-DFH" secondAttribute="trailing" id="Dud-I9-fnx"/>
                             <constraint firstItem="kDL-ar-DFH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="FT0-ew-jtl"/>
+                            <constraint firstItem="x9h-kY-xX8" firstAttribute="trailing" secondItem="FMu-K3-dvr" secondAttribute="trailing" id="GwI-hJ-xlM"/>
+                            <constraint firstItem="x9h-kY-xX8" firstAttribute="top" secondItem="kDL-ar-DFH" secondAttribute="bottom" constant="8" symbolic="YES" id="fTI-1u-uOe"/>
                             <constraint firstAttribute="trailing" secondItem="kDL-ar-DFH" secondAttribute="trailing" constant="16" id="qFh-Id-J83"/>
                         </constraints>
                     </view>

@@ -46,19 +46,19 @@ Styling will always be applied on the active range. When executing a function on
 
 For instance here all text will be size 20
 
-```
+```swift
 ("red".red + "blue".blue).all.size(20)
 ```
 
 And here only the text blue will be size 20
 
-```
+```swift
 "red".red + "blue".blue.all.size(20)
 ```
 
 And like this all text will be size 20
 
-```
+```swift
 "red".red.append("blue").blue.all.size(20)
 ```
 
@@ -66,7 +66,7 @@ And like this all text will be size 20
 
 Here is a sample of some basic functions:
 
-```
+```swift
 textView1.attributer =
     "1. ".red
     .append("This is the first test. ").green
@@ -86,7 +86,7 @@ textView1.attributer =
 
 Some more attributes and now using + instead of .append:
 
-```
+```swift
 textView1.attributer =
     "2. red, ".red.underline.underline(0x00ff00)
     + "green, ".green.fontName("Helvetica").size(30)
@@ -100,7 +100,7 @@ textView1.attributer =
 
 A match and matchAll sample:
 
-```
+```swift
 textView1.attributer = "It is this or it is that where the word is is selected".size(20)
     .match("is").underline.underline(UIColor.red)
     .matchAll("is").strikethrough(4)
@@ -110,7 +110,7 @@ textView1.attributer = "It is this or it is that where the word is is selected".
 
 A hashtags and mentions sample:
 
-```
+```swift
 textView1.attributer = "@test: What #hashtags do we have in @evermeer #AtributedTextView library"
     .matchHashtags.underline
     .matchMentions
@@ -124,7 +124,7 @@ textView1.attributer = "@test: What #hashtags do we have in @evermeer #Atributed
 
 Some other text formating samples:
 
-```
+```swift
 textView1.attributer =  (
     "test stroke".strokeWidth(2).strokeColor(UIColor.red)
     + "test stroke 2\n".strokeWidth(2).strokeColor(UIColor.blue)
@@ -141,7 +141,7 @@ textView1.attributer =  (
 
 Paragraph formatting:
 
-```
+```swift
 textView1.attributer = (
     "The quick brown fox jumps over the lazy dog.\nPack my box with five dozen liquor jugs.\nSeveral fabulous dixieland jazz groups played with quick tempo."
     .paragraphLineHeightMultiple(5)
@@ -161,7 +161,7 @@ textView1.attributer = (
 ### Use the attributedText functionality on a UILabel
 You can also use the Attributer for your UILabel. You only can't use the makeInteract function:
 
-```
+```swift
 let myUILabel = UILabel()
 myUILabel.attributedText = ("Just ".red + "some ".green + "text.".orange).string
 ```
@@ -170,7 +170,7 @@ myUILabel.attributedText = ("Just ".red + "some ".green + "text.".orange).string
 ### Extending AttributedTextView
 In the demo app you can see how you can extend the AttributedTextView with a custom property / function that will perform multiple actions. Here is a simple sample that will show you how you can create a myTitle property that will set multiple attributes:
 
-```
+```swift
 extension Attributer {
     open var myTitle: Attributer {
         get {
@@ -191,7 +191,7 @@ public extension String {
 ### Decorating the Attributed object
 In the demo app there is also a sample that shows you how you could decorate an Attributed object with default styling.
 
-```
+```swift
         attributedTextView.attributer = decorate(4) { content in return content
             + "This is our custom title".myTitle
         }
@@ -199,13 +199,74 @@ In the demo app there is also a sample that shows you how you could decorate an 
 
 The decorate function can then look something like this:
 
-```
+```swift
     func decorate(_ id: Int, _ builder: ((_ content: Attributer) -> Attributer)) -> Attributer {
         var b = "Sample \(id + 1):\n\n".red
         b = builder(b) // Now add the content
         return b
     }
 ```
+
+### Creating your own custom label
+There is also an AttributedLabel class which derives from UILabel which makes it easy to create your own custom control that includes support for interfacebuilder. If you put a lable on a form in interfacebuilder and set it's class to your subclass (AttributedLabelSubclassDemo in the sample below) Then you will see the text formated in interface building according to what you have implemented in the configureAttributedLabel function. Here is a sample where a highlightText property is added so that a text can be constructed where that part is highlighted. 
+
+```swift
+import AttributedTextView
+import UIKit
+
+@IBDesignable open class AttributedLabelSubclassDemo: AttributedLabel {
+
+    // Add this field in interfacebuilder and make sure the interface is updated after changes
+    @IBInspectable var highlightText: String? {
+        didSet { configureAttributedLabel() }
+    }
+
+    // Configure our custom styling.
+    override open func configureAttributedLabel() {
+        self.numberOfLines = 0
+        if let highlightText = self.highlightText {
+            self.attributedText = self.text?.green.match(highlightText).red.string
+        } else {
+            self.attributedText = self.text?.green.string
+        }
+        layoutIfNeeded()
+    }
+}
+```
+
+### Creating your own custom textview
+You could do the same as a label with the AttributedTextView (see previous paragraph). In the sample below 2 properties are entered into interfacebuilder the linkText is the part of the text what will be clickable and linkUrl will be the webpage that will be opened.
+
+```swift
+import AttributedTextView
+import UIKit
+
+@IBDesignable class AttributedTextViewSubclassDemo: AttributedTextView {
+
+    // Add this field in interfacebuilder and make sure the interface is updated after changes
+    @IBInspectable var linkText: String? {
+        didSet { configureAttributedTextView() }
+    }
+
+    // Add this field in interfacebuilder and make sure the interface is updated after changes
+    @IBInspectable var linkUrl: String? {
+        didSet { configureAttributedTextView() }
+    }
+
+    // Configure our custom styling.
+    override func configureAttributedTextView() {
+        if let linkText = self.linkText, let linkUrl = self.linkUrl {
+            self.attributer = (self.text ?? "").green.match(linkText).makeInteract { _ in
+                UIApplication.shared.open(URL(string: linkUrl)!, options: [:], completionHandler: { completed in })
+            }
+        } else {
+            self.attributer = (self.text ?? "").green
+        }
+        layoutIfNeeded()
+    }
+}
+```
+
 
 ## Installation
 
