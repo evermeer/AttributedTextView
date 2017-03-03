@@ -23,8 +23,8 @@ import UIKit
     
     // Configure our custom styling.
     override func configureAttributedTextView() {
-        if let linkText = self.linkText, let linkUrl = self.linkUrl {
-            self.attributer = (self.text ?? "").green.match(linkText).makeInteract { _ in
+        if let text = self.text, let linkText = self.linkText, let linkUrl = self.linkUrl {
+            self.attributer = text.green.match(linkText).makeInteract { _ in
                 UIApplication.shared.open(URL(string: linkUrl)!, options: [:], completionHandler: { completed in })
                 }
         } else {
