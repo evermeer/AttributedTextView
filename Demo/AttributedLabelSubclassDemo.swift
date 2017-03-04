@@ -68,11 +68,14 @@ import UIKit
         let rect = CGRect(x: 0, y: -24, width: 40, height: 40)
         for (index, state) in states.enumerated() {
             let image = (state == "1" ? okImage : (state == "0" ? notOkImage : warningImage))
-            attr = attr.append(Attributer(image, bounds: rect))
-                .append("   " + texts[index]).green
-                .match(highlights[index]).red.append("\n")
-                .all.paragraphHeadIndent(54).paragraphLineSpacing(-10).paragraphSpacing(20).paragraphApplyStyling
-
+            attr = attr.append(
+                Attributer(image, bounds: rect)
+                .append("   " + texts[index]).green.append("\n")
+                .match(highlights[index]).red
+                .all.paragraphHeadIndent(54)
+                    .paragraphLineSpacing(-10)
+                    .paragraphSpacing(20)
+                    .paragraphApplyStyling)
         }
         self.attributedText = attr.attributedText
         layoutIfNeeded()
