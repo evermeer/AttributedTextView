@@ -243,6 +243,13 @@ import UIKit
 }
 ```
 
+In the demo app there is also a lable subclass for an icon list like this:
+![animated](https://github.com/evermeer/AttributedTextView/blob/master/Screenshots/IconList.png?raw=true)
+
+You can find the code here:
+[Icon bulet list code](https://github.com/evermeer/AttributedTextView/blob/master/Demo/AttributedLabelSubclassDemo.swift#L52)
+
+
 ### Creating your own custom textview
 You could do the same as a label with the AttributedTextView (see previous paragraph). In the sample below 2 properties are entered into interfacebuilder the linkText is the part of the text what will be clickable and linkUrl will be the webpage that will be opened.
 
