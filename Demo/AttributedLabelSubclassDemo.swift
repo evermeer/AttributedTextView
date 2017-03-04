@@ -65,16 +65,16 @@ import UIKit
         
         // loop through the items and buildup the bulit list
         var attr = Attributer("")
-        let rect = CGRect(x: 0, y: -24, width: 40, height: 40)
+        let rect = CGRect(x: 0, y: -4, width: 20, height: 20)
         for (index, state) in states.enumerated() {
             let image = (state == "1" ? okImage : (state == "0" ? notOkImage : warningImage))
             attr = attr.append(
                 Attributer(image, bounds: rect)
                 .append("   " + texts[index]).green.append("\n")
                 .match(highlights[index]).red
-                .all.paragraphHeadIndent(54)
-                    .paragraphLineSpacing(-10)
-                    .paragraphSpacing(20)
+                .all.paragraphHeadIndent(34)
+                    .paragraphLineSpacing(-2)
+                    .paragraphSpacing(15)
                     .paragraphApplyStyling)
         }
         self.attributedText = attr.attributedText

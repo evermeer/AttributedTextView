@@ -43,8 +43,8 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="linkUrl" value="http://evict.nl"/>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This label has a highlighted text in the middle." lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMu-K3-dvr" customClass="AttributedLabelSubclassDemo" customModule="Demo" customModuleProvider="target">
-                                <rect key="frame" x="16" y="396" width="343" height="261.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This label has a highlighted text in the middle." lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMu-K3-dvr" customClass="AttributedLabelSubclassDemo" customModule="Demo" customModuleProvider="target">
+                                <rect key="frame" x="16" y="396" width="343" height="251"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -53,9 +53,11 @@
                                     <userDefinedRuntimeAttribute type="image" keyPath="notOkImage" value="cross.png"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="warningImage" value="warning.png"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="seperator" value="|"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="multiTexts" value="This is item one.|And now item two.|And maybe item three which is a longer text over two rows.|Just an extra item."/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="multiHighlights" value="item|And|three|extra"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="multiIconState" value="0|2|1|0"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="multiTexts">
+                                        <string key="value">This is item one.|And now item two.|And maybe item three which is a longer text over two rows.|Just an extra item.|test|another test</string>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="multiHighlights" value="item|And|three|extra|test|#"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="multiIconState" value="0|2|1|x|1|0"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
