@@ -43,8 +43,8 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="linkUrl" value="http://evict.nl"/>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This label has a highlighted text in the middle." lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMu-K3-dvr" customClass="AttributedLabelSubclassDemo" customModule="Demo" customModuleProvider="target">
-                                <rect key="frame" x="16" y="396" width="343" height="251"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This label has a highlighted text in the middle." lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMu-K3-dvr" customClass="AttributedLabelSubclassDemo" customModule="Demo" customModuleProvider="target">
+                                <rect key="frame" x="16" y="396" width="343" height="248.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
