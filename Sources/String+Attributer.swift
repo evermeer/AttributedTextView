@@ -446,8 +446,8 @@ public extension String {
      
      -parameter image: the UIImage that will be used as the attachment
      */
-    public func attach(_ image: UIImage?) -> Attributer {
-        return attributer.attach(image)
+    public func attach(_ image: UIImage?, bounds: CGRect? = nil) -> Attributer {
+        return attributer.attach(image, bounds: bounds)
     }
     
     /**
@@ -455,8 +455,8 @@ public extension String {
      
      -parameter imageStr: the name of the image that will be used as the attachment
      */
-    public func attach(_ imageStr: String) -> Attributer {
-        return attributer.attach(imageStr)
+    public func attach(_ imageStr: String, bounds: CGRect? = nil) -> Attributer {
+        return attributer.attach(imageStr, bounds: bounds)
     }
     
     /**

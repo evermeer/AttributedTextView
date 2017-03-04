@@ -22,16 +22,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kDL-ar-DFH" customClass="AttributedTextView" customModule="AttributedTextView">
-                                <rect key="frame" x="16" y="20" width="343" height="399"/>
+                                <rect key="frame" x="16" y="20" width="343" height="290"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="399" id="U1a-55-6y4"/>
+                                    <constraint firstAttribute="height" constant="290" id="U1a-55-6y4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This is a website link" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="x9h-kY-xX8" customClass="AttributedTextViewSubclassDemo" customModule="Demo" customModuleProvider="target">
-                                <rect key="frame" x="16" y="427" width="343" height="48"/>
+                                <rect key="frame" x="16" y="340" width="343" height="48"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="FUJ-aZ-Y9i"/>
@@ -43,13 +43,19 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="linkUrl" value="http://evict.nl"/>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This label has a highlighted text in the middle." lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMu-K3-dvr" customClass="AttributedLabelSubclassDemo" customModule="Demo" customModuleProvider="target">
-                                <rect key="frame" x="16" y="483" width="343" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This label has a highlighted text in the middle." lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMu-K3-dvr" customClass="AttributedLabelSubclassDemo" customModule="Demo" customModuleProvider="target">
+                                <rect key="frame" x="16" y="396" width="343" height="271"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="highlightText" value="highlighted"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="okImage" value="check.png"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="notOkImage" value="cross.png"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="warningImage" value="warning.png"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="seperator" value="|"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="multiTexts" value="This is item one.|And now item two.|And maybe item three which is a longer text over two rows.|Just an extra item."/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="multiHighlights" value="item|And|three|extra"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="multiIconState" value="0|2|1|0"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
@@ -62,7 +68,7 @@
                             <constraint firstItem="x9h-kY-xX8" firstAttribute="trailing" secondItem="kDL-ar-DFH" secondAttribute="trailing" id="Dud-I9-fnx"/>
                             <constraint firstItem="kDL-ar-DFH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="FT0-ew-jtl"/>
                             <constraint firstItem="x9h-kY-xX8" firstAttribute="trailing" secondItem="FMu-K3-dvr" secondAttribute="trailing" id="GwI-hJ-xlM"/>
-                            <constraint firstItem="x9h-kY-xX8" firstAttribute="top" secondItem="kDL-ar-DFH" secondAttribute="bottom" constant="8" symbolic="YES" id="fTI-1u-uOe"/>
+                            <constraint firstItem="x9h-kY-xX8" firstAttribute="top" secondItem="kDL-ar-DFH" secondAttribute="bottom" constant="30" id="fTI-1u-uOe"/>
                             <constraint firstAttribute="trailing" secondItem="kDL-ar-DFH" secondAttribute="trailing" constant="16" id="qFh-Id-J83"/>
                         </constraints>
                     </view>
@@ -75,4 +81,9 @@
             <point key="canvasLocation" x="136.80000000000001" y="131.78410794602701"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="check.png" width="40" height="40"/>
+        <image name="cross.png" width="40" height="40"/>
+        <image name="warning.png" width="40" height="40"/>
+    </resources>
 </document>

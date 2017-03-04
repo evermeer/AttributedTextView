@@ -17,7 +17,7 @@ open class Attributer {
      You can get the final NSMutableAttributedString from here
      */
     
-    open var string: NSMutableAttributedString
+    open var attributedText: NSMutableAttributedString
     /**
      Used to set the link color on the UITextView
      */
@@ -51,8 +51,8 @@ open class Attributer {
      -parameter string: The NSMutableAttributedString that will be used as the initial value of Attributer.
      */
     public init(_ string: NSMutableAttributedString) {
-        self.string = string
-        ranges.append(NSRange(location: 0, length: self.string.length))
+        self.attributedText = string
+        ranges.append(NSRange(location: 0, length: self.attributedText.length))
     }
     
     /**
@@ -87,7 +87,22 @@ open class Attributer {
     public convenience init(_ string: String) {
         self.init(NSMutableAttributedString(string: string))
     }
-    
+
+    /**
+     Contructor method for Attributer
+     
+     Instantiate a new Attributer based on a string
+     
+     -parameter string: The String that will be used as the initial value of Attributer.
+     */
+    public convenience init(_ image: UIImage, bounds: CGRect? = nil) {
+        let imageAttachment = NSTextAttachment()
+        imageAttachment.image = image
+        if let bounds = bounds {
+            imageAttachment.bounds = bounds
+        }
+        self.init(NSAttributedString(attachment: imageAttachment))
+    }
     
     
     //MARK - Color functions
@@ -255,7 +270,7 @@ open class Attributer {
     open var all: Attributer {
         get {
             ranges.removeAll()
-            ranges.append(NSRange(location: 0, length: self.string.length))
+            ranges.append(NSRange(location: 0, length: self.attributedText.length))
             return self
         }
     }
@@ -303,7 +318,7 @@ open class Attributer {
      -parameter options: The search options
      */
     open func matchWithOptions(_ substring: String, _ options: NSString.CompareOptions = .literal) -> Attributer {
-        let string = self.string.string as NSString
+        let string = self.attributedText.string as NSString
         ranges.removeAll()
         ranges.append(string.range(of: substring, options: options))
         return self
@@ -325,7 +340,7 @@ open class Attributer {
      -parameter options: The search options
      */
     open func matchAllWithOptions(_ substring: String, _ options: NSString.CompareOptions = .literal) -> Attributer {
-        let string = self.string.string as NSString
+        let string = self.attributedText.string as NSString
         var range = string.range(of: substring, options: options)
         ranges.removeAll()
         ranges.append(range)
@@ -381,8 +396,8 @@ open class Attributer {
      */
     open func matchPattern(_ pattern: String) -> Attributer {
         guard let elementRegex: NSRegularExpression = Attributer.regularExpression(for: pattern) else { return self }
-        let range = NSRange(location: 0, length: self.string.string.characters.count)
-        let results: [NSTextCheckingResult] = elementRegex.matches(in: self.string.string, options: [], range: range)
+        let range = NSRange(location: 0, length: self.attributedText.string.characters.count)
+        let results: [NSTextCheckingResult] = elementRegex.matches(in: self.attributedText.string, options: [], range: range)
         ranges = results.map { $0.range }
         return self
     }
@@ -403,8 +418,8 @@ open class Attributer {
      */
     open func append(_ attributedString: NSMutableAttributedString) -> Attributer {
         ranges.removeAll()
-        let rememberLength = self.string.length
-        self.string.append(attributedString)
+        let rememberLength = self.attributedText.length
+        self.attributedText.append(attributedString)
         ranges.append(NSRange(location: rememberLength, length: attributedString.length))
         return self
     }
@@ -419,7 +434,7 @@ open class Attributer {
             self.urlCallbacks[callback.key] = callback.value
         }
         self.linkColor = attributer.linkColor ?? self.linkColor
-        return self.append(attributer.string)
+        return self.append(attributer.attributedText)
         
     }
 
@@ -434,13 +449,13 @@ open class Attributer {
      */
     open func fontName(_ fontName: String) -> Attributer {
         for range in self.ranges {
-            if let font = self.string.attribute(NSFontAttributeName, at: 0, effectiveRange:nil) as? UIFont {
+            if let font = self.attributedText.attribute(NSFontAttributeName, at: 0, effectiveRange:nil) as? UIFont {
                 if let currentFont = UIFont(name: fontName, size: font.pointSize) {
-                    self.string.addAttribute(NSFontAttributeName, value: currentFont, range: range)
+                    self.attributedText.addAttribute(NSFontAttributeName, value: currentFont, range: range)
                 }
             } else {
                 if let currentFont = UIFont(name: fontName, size: UIFont.systemFontSize) {
-                    self.string.addAttribute(NSFontAttributeName, value: currentFont, range: range)
+                    self.attributedText.addAttribute(NSFontAttributeName, value: currentFont, range: range)
                 }
             }
         }
@@ -454,10 +469,10 @@ open class Attributer {
      */
     open func size(_ size: CGFloat) -> Attributer {
         for range in self.ranges {
-            if let font = self.string.attribute(NSFontAttributeName, at: 0, effectiveRange:nil) as? UIFont {
-                self.string.addAttribute(NSFontAttributeName, value: UIFont(name: font.fontName, size: size)!, range: range)
+            if let font = self.attributedText.attribute(NSFontAttributeName, at: 0, effectiveRange:nil) as? UIFont {
+                self.attributedText.addAttribute(NSFontAttributeName, value: UIFont(name: font.fontName, size: size)!, range: range)
             } else {
-                self.string.addAttribute(NSFontAttributeName, value: UIFont.systemFont(ofSize: size), range: range)
+                self.attributedText.addAttribute(NSFontAttributeName, value: UIFont.systemFont(ofSize: size), range: range)
             }
         }
         return self
@@ -486,9 +501,9 @@ open class Attributer {
     @available(*, deprecated, message: "use AttributedTextView with makeInteract: instead")
     open func makeInteractWithURLforScheme(_ scheme: String) -> Attributer {
         for nsRange in self.ranges {
-            let iRange = self.string.string.range(from: nsRange)
-            if let escapedString = self.string.string.substring(with: iRange!).addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlHostAllowed) {
-                self.string.addAttribute(NSLinkAttributeName, value: "\(scheme):\(escapedString)", range: nsRange)
+            let iRange = self.attributedText.string.range(from: nsRange)
+            if let escapedString = self.attributedText.string.substring(with: iRange!).addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlHostAllowed) {
+                self.attributedText.addAttribute(NSLinkAttributeName, value: "\(scheme):\(escapedString)", range: nsRange)
             }
         }
         return self
@@ -501,9 +516,9 @@ open class Attributer {
      */
     open func makeInteract(_ callback: @escaping ((_ link: String) -> ())) -> Attributer {
         for nsRange in self.ranges {
-            let iRange = self.string.string.range(from: nsRange)
-            if let escapedString = self.string.string.substring(with:  iRange!).addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlHostAllowed) {
-                self.string.addAttribute(NSLinkAttributeName, value: "AttributedTextView:\(escapedString)", range: nsRange)
+            let iRange = self.attributedText.string.range(from: nsRange)
+            if let escapedString = self.attributedText.string.substring(with:  iRange!).addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlHostAllowed) {
+                self.attributedText.addAttribute(NSLinkAttributeName, value: "AttributedTextView:\(escapedString)", range: nsRange)
                 urlCallbacks[escapedString] = callback
             }
         }
@@ -589,10 +604,13 @@ open class Attributer {
      
      -parameter image: the UIImage that will be used as the attachment
      */
-    open func attach(_ image: UIImage?) -> Attributer {
+    open func attach(_ image: UIImage?, bounds: CGRect? = nil) -> Attributer {
         let imageAttachment = NSTextAttachment()
         imageAttachment.image = image
-        string.append(NSAttributedString(attachment: imageAttachment))
+        if let bounds = bounds {
+            imageAttachment.bounds = bounds
+        }
+        self.attributedText.append(NSAttributedString(attachment: imageAttachment))
         return self
     }
     
@@ -601,10 +619,13 @@ open class Attributer {
      
      -parameter imageStr: the name of the image that will be used as the attachment
      */
-    open func attach(_ imageStr: String) -> Attributer {
+    open func attach(_ imageStr: String, bounds: CGRect? = nil) -> Attributer {
         let imageAttachment = NSTextAttachment()
         imageAttachment.image = UIImage(named: imageStr)
-        string.append(NSAttributedString(attachment: imageAttachment))
+        if let bounds = bounds {
+            imageAttachment.bounds = bounds
+        }
+        self.attributedText.append(NSAttributedString(attachment: imageAttachment))
         return self
     }
     
@@ -1031,7 +1052,7 @@ open class Attributer {
     @discardableResult
     fileprivate func applyAttributes(_ attributeName: String, value: AnyObject) -> Attributer {
         for range in self.ranges {
-            self.string.addAttribute(attributeName, value: value, range: range)
+            self.attributedText.addAttribute(attributeName, value: value, range: range)
         }
         return self
     }

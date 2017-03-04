@@ -63,7 +63,7 @@ import UIKit
         }
         set { 
             _attributer = newValue
-            self.attributedText = _attributer?.string
+            self.attributedText = _attributer?.attributedText
 
             super.delegate = self
             self.isUserInteractionEnabled = true

@@ -172,7 +172,7 @@ You can also use the Attributer for your UILabel. You only can't use the makeInt
 
 ```swift
 let myUILabel = UILabel()
-myUILabel.attributedText = ("Just ".red + "some ".green + "text.".orange).string
+myUILabel.attributedText = ("Just ".red + "some ".green + "text.".orange).attributedText
 ```
 
 
@@ -234,9 +234,9 @@ import UIKit
     override open func configureAttributedLabel() {
         self.numberOfLines = 0
         if let highlightText = self.highlightText {
-            self.attributedText = self.text?.green.match(highlightText).red.string
+            self.attributedText = self.text?.green.match(highlightText).red.attributedText
         } else {
-            self.attributedText = self.text?.green.string
+            self.attributedText = self.text?.green.attributedText
         }
         layoutIfNeeded()
     }
