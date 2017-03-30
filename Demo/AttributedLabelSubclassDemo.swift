@@ -63,21 +63,39 @@ import UIKit
         guard let warningImage = self.warningImage else { return }
         if texts.count != highlights.count || texts.count != states.count { return }
         
-        // loop through the items and buildup the bulit list
+        // Start with an empty Attributer
         var attr = Attributer("")
+        
+        // The icon needs this bounds in order to position it correctly
         let rect = CGRect(x: 0, y: -4, width: 20, height: 20)
+        
+        // loop through the items and buildup the bulit list
         for (index, state) in states.enumerated() {
+            
+            // What image do you want for this item
             let image = (state == "1" ? okImage : (state == "0" ? notOkImage : warningImage))
+            
+            // Build up a line and append it
             attr = attr.append(
+            
+                // The image
                 Attributer(image, bounds: rect)
+                
+                // The text in green
                 .append("   " + texts[index]).green.append("\n")
+                
+                // select the highlight text and make it red
                 .match(highlights[index]).red
-                .all.paragraphHeadIndent(34)
-                    .paragraphLineSpacing(-2)
-                    .paragraphSpacing(15)
-                    .paragraphApplyStyling)
+                )
         }
-        self.attributedText = attr.attributedText
+        
+        // apply the correct paragraph layout and set the attributedText
+        self.attributedText = attr.all.paragraphHeadIndent(34) // Make sure a second line is alligned
+            .paragraphLineSpacing(-2) // a little less than default spacing between lines
+            .paragraphSpacing(15) // The space between items
+            .paragraphApplyStyling.attributedText // apply the styling and put it in the attributedText
+
+        // Just to be sure
         layoutIfNeeded()
     }
 }

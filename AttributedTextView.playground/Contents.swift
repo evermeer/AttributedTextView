@@ -26,7 +26,7 @@ var attributedText = textView1.attributedText // Vieuw the details for this -->
 
 // You can also use the Attributer for your UILabel. You only can't use the makeInteract function
 let myUILabel = UILabel()
-myUILabel.attributedText = ("Just ".red + "some ".green + "text.".orange).string
+myUILabel.attributedText = ("Just ".red + "some ".green + "text.".orange).attributedText
 let showInPlayground = myUILabel.attributedText // Vieuw the details for this -->
 
 // Some more attributes and now using + instead of .append
