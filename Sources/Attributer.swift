@@ -449,7 +449,8 @@ open class Attributer {
      */
     open func fontName(_ fontName: String) -> Attributer {
         for range in self.ranges {
-            if let font = self.attributedText.attributedSubstring(from: range).attribute(NSFontAttributeName, at: 0, effectiveRange:nil) as? UIFont {
+            let substring = self.attributedText.attributedSubstring(from: range)
+            if substring.length > 0, let font = substring.attribute(NSFontAttributeName, at: 0, effectiveRange:nil) as? UIFont {
                 if let currentFont = UIFont(name: fontName, size: font.pointSize) {
                     self.attributedText.addAttribute(NSFontAttributeName, value: currentFont, range: range)
                 }
@@ -469,7 +470,8 @@ open class Attributer {
      */
     open func size(_ size: CGFloat) -> Attributer {
         for range in self.ranges {
-            if let font = self.attributedText.attributedSubstring(from: range).attribute(NSFontAttributeName, at: 0, effectiveRange:nil) as? UIFont {
+            let substring = self.attributedText.attributedSubstring(from: range)
+            if substring.length > 0, let font = substring.attribute(NSFontAttributeName, at: 0, effectiveRange:nil) as? UIFont {
                 self.attributedText.addAttribute(NSFontAttributeName, value: UIFont(name: font.fontName, size: size)!, range: range)
             } else {
                 self.attributedText.addAttribute(NSFontAttributeName, value: UIFont.systemFont(ofSize: size), range: range)
