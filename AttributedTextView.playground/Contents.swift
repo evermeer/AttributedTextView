@@ -1,6 +1,8 @@
 //: Playground - noun: a place where people can play.
 
 // Since interaction is not working, clicking the links won't do anything.
+// Please build the project first... First time rendering can take a minute
+
 
 import AttributedTextView
 import UIKit
