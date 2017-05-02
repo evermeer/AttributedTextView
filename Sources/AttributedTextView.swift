@@ -44,6 +44,16 @@ import UIKit
         }
     }
     
+    // For enabeling the size adjustment
+    @IBInspectable open var forceIntrinsicContentSizeToBeContentSize: Bool = false {
+        didSet { configureAttributedTextView() }
+    }
+
+    // Return the contentSize if its forced enabled
+    override open var intrinsicContentSize: CGSize {
+        return self.forceIntrinsicContentSizeToBeContentSize ? self.contentSize : super.intrinsicContentSize
+    }
+
     // Subclass AttributedTextView and override this function if you want to use easy custum controls in interface builder
     open func configureAttributedTextView() {
     }
