@@ -303,7 +303,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'AttributedTextView', '~> 0.1.0'
+pod 'AttributedTextView', '~> 0.5.1'
 ```
 
 Then, run the following command:
@@ -326,7 +326,7 @@ $ brew install carthage
 To integrate AttributedTextView into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "AttributedTextView/AttributedTextView" ~> 0.1.0
+github "evermeer/AttributedTextView" ~> 0.5.1
 ```
 ### Swift Package Manager
 
@@ -338,7 +338,7 @@ import PackageDescription
 let package = Package(
 name: "HelloAttributedTextView",
 dependencies: [
-.Package(url: "https://github.com/evermeer/AttributedTextView.git", "0.1.0")
+.Package(url: "https://github.com/evermeer/AttributedTextView.git", "0.5.1")
 ]
 )
 ```
