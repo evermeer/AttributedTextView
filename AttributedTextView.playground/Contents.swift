@@ -87,7 +87,12 @@ textView1.attributer = (
     ).all.size(12)
 attributedText = textView1.attributedText // View the details for this -->
 
-
+let rules = "Using backslash r has a strange effect on the last url if there is nothing behind it.\r\nhttp://serverurl.com/api.html\r\nhttp://serverurl.com/api2.html\r\nhttp://serverurl.com/api3.html"
+textView1.attributer = rules.matchLinks
+    .makeInteract({ link in
+        print("\(link)")
+    })
+attributedText = textView1.attributedText // View the details for this -->
 
 
 

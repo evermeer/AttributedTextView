@@ -3,72 +3,97 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/evermeer/Desktop/AttributedTextView/AttributedTextView.playground#CharacterRangeLen=0&amp;CharacterRangeLoc=998&amp;EndingLineNumber=26&amp;StartingLineNumber=26&amp;Timestamp=514119954.724465"
+         documentLocation = "file:///Users/eve21962/Desktop/dev/GitHub/AttributedTextView/AttributedTextView.playground#CharacterRangeLen=0&amp;CharacterRangeLoc=998&amp;EndingColumnNumber=0&amp;EndingLineNumber=26&amp;StartingColumnNumber=0&amp;StartingLineNumber=26&amp;Timestamp=522767409.64367"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/evermeer/Desktop/AttributedTextView/AttributedTextView.playground#CharacterRangeLen=0&amp;CharacterRangeLoc=508&amp;EndingLineNumber=24&amp;StartingLineNumber=24&amp;Timestamp=514119954.724629"
+         documentLocation = "file:///Users/eve21962/Desktop/dev/GitHub/AttributedTextView/AttributedTextView.playground#CharacterRangeLen=0&amp;CharacterRangeLoc=508&amp;EndingColumnNumber=4&amp;EndingLineNumber=15&amp;StartingColumnNumber=4&amp;StartingLineNumber=15&amp;Timestamp=522767409.643805"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=4405&amp;EndingColumnNumber=20&amp;EndingLineNumber=39&amp;StartingColumnNumber=5&amp;StartingLineNumber=39&amp;Timestamp=514119954.724733"
+         documentLocation = "file:///Users/eve21962/Desktop/dev/GitHub/AttributedTextView/AttributedTextView.playground#CharacterRangeLen=0&amp;CharacterRangeLoc=4770&amp;EndingColumnNumber=0&amp;EndingLineNumber=95&amp;StartingColumnNumber=0&amp;StartingLineNumber=95&amp;Timestamp=522767409.643906"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=4405&amp;EndingColumnNumber=32&amp;EndingLineNumber=39&amp;StartingColumnNumber=1&amp;StartingLineNumber=39&amp;Timestamp=514119954.724851"
+         documentLocation = "file:///Users/eve21962/Desktop/dev/GitHub/AttributedTextView/AttributedTextView.playground#CharacterRangeLen=0&amp;CharacterRangeLoc=4770&amp;EndingColumnNumber=0&amp;EndingLineNumber=95&amp;StartingColumnNumber=0&amp;StartingLineNumber=95&amp;Timestamp=522767409.644002"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "#CharacterRangeLen=1&amp;CharacterRangeLoc=1077&amp;EndingColumnNumber=42&amp;EndingLineNumber=26&amp;StartingColumnNumber=18&amp;StartingLineNumber=26&amp;Timestamp=514119954.72496"
+         documentLocation = "file:///Users/eve21962/Desktop/dev/GitHub/AttributedTextView/AttributedTextView.playground#CharacterRangeLen=1&amp;CharacterRangeLoc=1077&amp;EndingColumnNumber=0&amp;EndingLineNumber=27&amp;StartingColumnNumber=79&amp;StartingLineNumber=26&amp;Timestamp=522767409.644147"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "#CharacterRangeLen=24&amp;CharacterRangeLoc=1791&amp;EndingColumnNumber=42&amp;EndingLineNumber=41&amp;StartingColumnNumber=18&amp;StartingLineNumber=41&amp;Timestamp=514119954.725094"
+         documentLocation = "file:///Users/eve21962/Desktop/dev/GitHub/AttributedTextView/AttributedTextView.playground#CharacterRangeLen=24&amp;CharacterRangeLoc=1791&amp;EndingColumnNumber=42&amp;EndingLineNumber=41&amp;StartingColumnNumber=18&amp;StartingLineNumber=41&amp;Timestamp=522767409.644242"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "#CharacterRangeLen=24&amp;CharacterRangeLoc=2065&amp;EndingColumnNumber=42&amp;EndingLineNumber=45&amp;StartingColumnNumber=18&amp;StartingLineNumber=45&amp;Timestamp=514119954.725211"
+         documentLocation = "file:///Users/eve21962/Desktop/dev/GitHub/AttributedTextView/AttributedTextView.playground#CharacterRangeLen=24&amp;CharacterRangeLoc=2065&amp;EndingColumnNumber=42&amp;EndingLineNumber=47&amp;StartingColumnNumber=18&amp;StartingLineNumber=47&amp;Timestamp=522767409.644349"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "#CharacterRangeLen=24&amp;CharacterRangeLoc=2584&amp;EndingColumnNumber=42&amp;EndingLineNumber=55&amp;StartingColumnNumber=18&amp;StartingLineNumber=55&amp;Timestamp=514119954.725322"
+         documentLocation = "file:///Users/eve21962/Desktop/dev/GitHub/AttributedTextView/AttributedTextView.playground#CharacterRangeLen=24&amp;CharacterRangeLoc=2584&amp;EndingColumnNumber=42&amp;EndingLineNumber=57&amp;StartingColumnNumber=18&amp;StartingLineNumber=57&amp;Timestamp=522767409.644439"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "#CharacterRangeLen=24&amp;CharacterRangeLoc=2913&amp;EndingColumnNumber=42&amp;EndingLineNumber=65&amp;StartingColumnNumber=18&amp;StartingLineNumber=65&amp;Timestamp=514119954.726034"
+         documentLocation = "file:///Users/eve21962/Desktop/dev/GitHub/AttributedTextView/AttributedTextView.playground#CharacterRangeLen=24&amp;CharacterRangeLoc=2913&amp;EndingColumnNumber=42&amp;EndingLineNumber=65&amp;StartingColumnNumber=18&amp;StartingLineNumber=65&amp;Timestamp=522767409.644535"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "#CharacterRangeLen=16&amp;CharacterRangeLoc=1297&amp;EndingColumnNumber=21&amp;EndingLineNumber=31&amp;StartingColumnNumber=5&amp;StartingLineNumber=31&amp;Timestamp=514119954.72616"
+         documentLocation = "file:///Users/eve21962/Desktop/dev/GitHub/AttributedTextView/AttributedTextView.playground#CharacterRangeLen=16&amp;CharacterRangeLoc=1297&amp;EndingColumnNumber=21&amp;EndingLineNumber=31&amp;StartingColumnNumber=5&amp;StartingLineNumber=31&amp;Timestamp=522767409.644663"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "#CharacterRangeLen=14&amp;CharacterRangeLoc=1003&amp;EndingColumnNumber=19&amp;EndingLineNumber=26&amp;StartingColumnNumber=5&amp;StartingLineNumber=26&amp;Timestamp=514119954.726273"
+         documentLocation = "file:///Users/eve21962/Desktop/dev/GitHub/AttributedTextView/AttributedTextView.playground#CharacterRangeLen=14&amp;CharacterRangeLoc=1003&amp;EndingColumnNumber=19&amp;EndingLineNumber=26&amp;StartingColumnNumber=5&amp;StartingLineNumber=26&amp;Timestamp=522767409.644782"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "#CharacterRangeLen=24&amp;CharacterRangeLoc=3826&amp;EndingColumnNumber=42&amp;EndingLineNumber=82&amp;StartingColumnNumber=18&amp;StartingLineNumber=82&amp;Timestamp=514119954.726384"
+         documentLocation = "file:///Users/eve21962/Desktop/dev/GitHub/AttributedTextView/AttributedTextView.playground#CharacterRangeLen=24&amp;CharacterRangeLoc=3826&amp;EndingColumnNumber=42&amp;EndingLineNumber=82&amp;StartingColumnNumber=18&amp;StartingLineNumber=82&amp;Timestamp=522767409.644889"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "#CharacterRangeLen=24&amp;CharacterRangeLoc=3576&amp;EndingColumnNumber=42&amp;EndingLineNumber=76&amp;StartingColumnNumber=18&amp;StartingLineNumber=76&amp;Timestamp=514119954.726495"
+         documentLocation = "file:///Users/eve21962/Desktop/dev/GitHub/AttributedTextView/AttributedTextView.playground#CharacterRangeLen=24&amp;CharacterRangeLoc=3576&amp;EndingColumnNumber=42&amp;EndingLineNumber=76&amp;StartingColumnNumber=18&amp;StartingLineNumber=76&amp;Timestamp=522767409.644981"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "#CharacterRangeLen=24&amp;CharacterRangeLoc=4336&amp;EndingColumnNumber=42&amp;EndingLineNumber=87&amp;StartingColumnNumber=18&amp;StartingLineNumber=87&amp;Timestamp=514119954.726645"
+         documentLocation = "file:///Users/eve21962/Desktop/dev/GitHub/AttributedTextView/AttributedTextView.playground#CharacterRangeLen=24&amp;CharacterRangeLoc=4336&amp;EndingColumnNumber=42&amp;EndingLineNumber=87&amp;StartingColumnNumber=18&amp;StartingLineNumber=87&amp;Timestamp=522767409.645083"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/eve21962/Desktop/dev/GitHub/AttributedTextView/AttributedTextView.playground#CharacterRangeLen=4&amp;CharacterRangeLoc=4591&amp;EndingColumnNumber=0&amp;EndingLineNumber=90&amp;StartingColumnNumber=197&amp;StartingLineNumber=89&amp;Timestamp=522767409.645181"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/eve21962/Desktop/dev/GitHub/AttributedTextView/AttributedTextView.playground#CharacterRangeLen=5&amp;CharacterRangeLoc=4591&amp;EndingColumnNumber=1&amp;EndingLineNumber=90&amp;StartingColumnNumber=197&amp;StartingLineNumber=89&amp;Timestamp=522767409.645285"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/eve21962/Desktop/dev/GitHub/AttributedTextView/AttributedTextView.playground#CharacterRangeLen=24&amp;CharacterRangeLoc=4704&amp;EndingColumnNumber=33&amp;EndingLineNumber=94&amp;StartingColumnNumber=9&amp;StartingLineNumber=94&amp;Timestamp=522767409.645394"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/eve21962/Desktop/dev/GitHub/AttributedTextView/AttributedTextView.playground#CharacterRangeLen=24&amp;CharacterRangeLoc=4711&amp;EndingColumnNumber=40&amp;EndingLineNumber=94&amp;StartingColumnNumber=16&amp;StartingLineNumber=94&amp;Timestamp=522767409.645509"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/eve21962/Desktop/dev/GitHub/AttributedTextView/AttributedTextView.playground#CharacterRangeLen=24&amp;CharacterRangeLoc=4713&amp;EndingColumnNumber=42&amp;EndingLineNumber=94&amp;StartingColumnNumber=18&amp;StartingLineNumber=94&amp;Timestamp=522767409.645606"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>

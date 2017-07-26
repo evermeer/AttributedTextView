@@ -385,7 +385,7 @@ open class Attributer {
      */
     open var matchLinks: Attributer {
         get {
-            return matchPattern("((https?://|www\\.|pic\\.)[-\\w;/?:@&=+$\\|\\_.!~*\\|'()\\[\\]%#,☺]+[\\w/#](\\(\\))?)(?=$|[\\s',\\|\\(\\).:;?\\-\\[\\]>\\)])")
+            return matchPattern("(([\\w]+:)?//)?(([\\d\\w]|%[a-fA-f\\d]{2,2})+(:([\\d\\w]|%[a-fA-f\\d]{2,2})+)?@)?([\\d\\w][-\\d\\w]{0,253}[\\d\\w]\\.)+[\\w]{2,63}(:[\\d]+)?(/([-+_~.\\d\\w]|%[a-fA-f\\d]{2,2})*)*(\\?(&?([-+_~.\\d\\w]|%[a-fA-f\\d]{2,2})=?)*)?(#([-+_~.\\d\\w]|%[a-fA-f\\d]{2,2})*)?")
         }
     }
 
@@ -396,7 +396,7 @@ open class Attributer {
      */
     open func matchPattern(_ pattern: String) -> Attributer {
         guard let elementRegex: NSRegularExpression = Attributer.regularExpression(for: pattern) else { return self }
-        let range = NSRange(location: 0, length: self.attributedText.string.characters.count)
+        let range = NSRange(location: 0, length: (self.attributedText.string as NSString).length)
         let results: [NSTextCheckingResult] = elementRegex.matches(in: self.attributedText.string, options: [], range: range)
         ranges = results.map { $0.range }
         return self
