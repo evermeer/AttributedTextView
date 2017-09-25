@@ -16,14 +16,14 @@ class ViewController: UIViewController {
 
     // These are the samples for this demo
     lazy var samples: [(title: String, show: (()->()))] = [
-        ("custom link and attributes", showSample1(self)),
-        ("coloring and aditional attributes", showSample2(self)),
-        ("single or multiple matches", showSample3(self)),
-        ("hashtags and mentions", showSample4(self)),
-        ("creating your own composit style", showSample5(self)),
-        ("just some more styles", showSample6(self)),
-        ("paragraph formatting", showSample7(self)),
-        ("more paragraph formatting", showSample8(self))
+        ("custom link and attributes", showSample1),
+        ("coloring and aditional attributes", showSample2),
+        ("single or multiple matches", showSample3),
+        ("hashtags and mentions", showSample4),
+        ("creating your own composit style", showSample5),
+        ("just some more styles", showSample6),
+        ("paragraph formatting", showSample7),
+        ("more paragraph formatting", showSample8)
     ]
 
     // For more basic tests about how to use AttributedTextView, see the playground
