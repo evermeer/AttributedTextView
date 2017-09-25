@@ -396,7 +396,7 @@ open class Attributer {
      */
     open func matchPattern(_ pattern: String) -> Attributer {
         guard let elementRegex: NSRegularExpression = Attributer.regularExpression(for: pattern) else { return self }
-        let range = NSRange(location: 0, length: (self.attributedText.string as NSString).length)
+        let range = NSRange(location: 0, length: (self.attributedText.string as NSString).length) // .characters.count is
         let results: [NSTextCheckingResult] = elementRegex.matches(in: self.attributedText.string, options: [], range: range)
         ranges = results.map { $0.range }
         return self

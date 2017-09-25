@@ -361,7 +361,7 @@
 					};
 					7F652A741DEE09E900A1E61F = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = WTH4QGEA23;
+						DevelopmentTeam = NFYKDD8CR4;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -814,7 +814,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = WTH4QGEA23;
+				DEVELOPMENT_TEAM = NFYKDD8CR4;
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -829,7 +829,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = WTH4QGEA23;
+				DEVELOPMENT_TEAM = NFYKDD8CR4;
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
