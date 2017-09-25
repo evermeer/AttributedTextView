@@ -113,7 +113,7 @@ open class Attributer {
      */
     open var black: Attributer {
         get {
-            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.black)
+            return applyAttributes(NSAttributedStringKey.foregroundColor.rawValue, value: UIColor.black)
         }
     }
 
@@ -122,7 +122,7 @@ open class Attributer {
      */
     open var darkGray: Attributer {
         get {
-            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.darkGray)
+            return applyAttributes(NSAttributedStringKey.foregroundColor.rawValue, value: UIColor.darkGray)
         }
     }
 
@@ -131,7 +131,7 @@ open class Attributer {
      */
     open var lightGray: Attributer {
         get {
-            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.lightGray)
+            return applyAttributes(NSAttributedStringKey.foregroundColor.rawValue, value: UIColor.lightGray)
         }
     }
 
@@ -140,7 +140,7 @@ open class Attributer {
      */
     open var white: Attributer {
         get {
-            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.white)
+            return applyAttributes(NSAttributedStringKey.foregroundColor.rawValue, value: UIColor.white)
         }
     }
 
@@ -149,7 +149,7 @@ open class Attributer {
      */
     open var gray: Attributer {
         get {
-            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.gray)
+            return applyAttributes(NSAttributedStringKey.foregroundColor.rawValue, value: UIColor.gray)
         }
     }
 
@@ -158,7 +158,7 @@ open class Attributer {
      */
     open var red: Attributer {
         get {
-            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.red)
+            return applyAttributes(NSAttributedStringKey.foregroundColor.rawValue, value: UIColor.red)
         }
     }
 
@@ -167,7 +167,7 @@ open class Attributer {
      */
     open var green: Attributer {
         get {
-            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.green)
+            return applyAttributes(NSAttributedStringKey.foregroundColor.rawValue, value: UIColor.green)
         }
     }
 
@@ -176,7 +176,7 @@ open class Attributer {
      */
     open var blue: Attributer {
         get {
-            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.blue)
+            return applyAttributes(NSAttributedStringKey.foregroundColor.rawValue, value: UIColor.blue)
         }
     }
 
@@ -185,7 +185,7 @@ open class Attributer {
      */
     open var cyan: Attributer {
         get {
-            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.cyan)
+            return applyAttributes(NSAttributedStringKey.foregroundColor.rawValue, value: UIColor.cyan)
         }
     }
 
@@ -194,7 +194,7 @@ open class Attributer {
      */
     open var yellow: Attributer {
         get {
-            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.yellow)
+            return applyAttributes(NSAttributedStringKey.foregroundColor.rawValue, value: UIColor.yellow)
         }
     }
     
@@ -203,7 +203,7 @@ open class Attributer {
      */
     open var magenta: Attributer {
         get {
-            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.magenta)
+            return applyAttributes(NSAttributedStringKey.foregroundColor.rawValue, value: UIColor.magenta)
         }
     }
     
@@ -212,7 +212,7 @@ open class Attributer {
      */
     open var orange: Attributer {
         get {
-            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.orange)
+            return applyAttributes(NSAttributedStringKey.foregroundColor.rawValue, value: UIColor.orange)
         }
     }
     
@@ -221,7 +221,7 @@ open class Attributer {
      */
     open var purple: Attributer {
         get {
-            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.purple)
+            return applyAttributes(NSAttributedStringKey.foregroundColor.rawValue, value: UIColor.purple)
         }
     }
     
@@ -230,7 +230,7 @@ open class Attributer {
      */
     open var brown: Attributer {
         get {
-            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.brown)
+            return applyAttributes(NSAttributedStringKey.foregroundColor.rawValue, value: UIColor.brown)
         }
     }
     
@@ -239,7 +239,7 @@ open class Attributer {
      */
     open var clear: Attributer {
         get {
-            return applyAttributes(NSForegroundColorAttributeName, value: UIColor.clear)
+            return applyAttributes(NSAttributedStringKey.foregroundColor.rawValue, value: UIColor.clear)
         }
     }
     
@@ -249,7 +249,7 @@ open class Attributer {
      -parameter color: The UIColor that will be applied.
      */
     open func color(_ color: UIColor) -> Attributer {
-        return applyAttributes(NSForegroundColorAttributeName, value: color)
+        return applyAttributes(NSAttributedStringKey.foregroundColor.rawValue, value: color)
     }
     
     /**
@@ -258,7 +258,7 @@ open class Attributer {
      -parameter hex: The hex value of the color that will be applied.
      */
     open func color(_ hex: Int) -> Attributer {
-        return applyAttributes(NSForegroundColorAttributeName, value: colorFrom(hex: hex))
+        return applyAttributes(NSAttributedStringKey.foregroundColor.rawValue, value: colorFrom(hex: hex))
     }
     
     // MARK - Selection functions
@@ -450,13 +450,13 @@ open class Attributer {
     open func fontName(_ fontName: String) -> Attributer {
         for range in self.ranges {
             let substring = self.attributedText.attributedSubstring(from: range)
-            if substring.length > 0, let font = substring.attribute(NSFontAttributeName, at: 0, effectiveRange:nil) as? UIFont {
+            if substring.length > 0, let font = substring.attribute(NSAttributedStringKey.font, at: 0, effectiveRange:nil) as? UIFont {
                 if let currentFont = UIFont(name: fontName, size: font.pointSize) {
-                    self.attributedText.addAttribute(NSFontAttributeName, value: currentFont, range: range)
+                    self.attributedText.addAttribute(NSAttributedStringKey.font, value: currentFont, range: range)
                 }
             } else {
                 if let currentFont = UIFont(name: fontName, size: UIFont.systemFontSize) {
-                    self.attributedText.addAttribute(NSFontAttributeName, value: currentFont, range: range)
+                    self.attributedText.addAttribute(NSAttributedStringKey.font, value: currentFont, range: range)
                 }
             }
         }
@@ -471,10 +471,10 @@ open class Attributer {
     open func size(_ size: CGFloat) -> Attributer {
         for range in self.ranges {
             let substring = self.attributedText.attributedSubstring(from: range)
-            if substring.length > 0, let font = substring.attribute(NSFontAttributeName, at: 0, effectiveRange:nil) as? UIFont {
-                self.attributedText.addAttribute(NSFontAttributeName, value: UIFont(name: font.fontName, size: size)!, range: range)
+            if substring.length > 0, let font = substring.attribute(NSAttributedStringKey.font, at: 0, effectiveRange:nil) as? UIFont {
+                self.attributedText.addAttribute(NSAttributedStringKey.font, value: UIFont(name: font.fontName, size: size)!, range: range)
             } else {
-                self.attributedText.addAttribute(NSFontAttributeName, value: UIFont.systemFont(ofSize: size), range: range)
+                self.attributedText.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: size), range: range)
             }
         }
         return self
@@ -505,7 +505,7 @@ open class Attributer {
         for nsRange in self.ranges {
             let iRange = self.attributedText.string.range(from: nsRange)
             if let escapedString = self.attributedText.string.substring(with: iRange!).addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlHostAllowed) {
-                self.attributedText.addAttribute(NSLinkAttributeName, value: "\(scheme):\(escapedString)", range: nsRange)
+                self.attributedText.addAttribute(NSAttributedStringKey.link, value: "\(scheme):\(escapedString)", range: nsRange)
             }
         }
         return self
@@ -520,7 +520,7 @@ open class Attributer {
         for nsRange in self.ranges {
             let iRange = self.attributedText.string.range(from: nsRange)
             if let escapedString = self.attributedText.string.substring(with:  iRange!).addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlHostAllowed) {
-                self.attributedText.addAttribute(NSLinkAttributeName, value: "AttributedTextView:\(escapedString)", range: nsRange)
+                self.attributedText.addAttribute(NSAttributedStringKey.link, value: "AttributedTextView:\(escapedString)", range: nsRange)
                 urlCallbacks[escapedString] = callback
             }
         }
@@ -553,7 +553,7 @@ open class Attributer {
      -parameter link: The URL that will be forwarded to the UITextViewDelegate
      */
     open func link(_ link: URL) -> Attributer {
-        return applyAttributes(NSLinkAttributeName, value: link as AnyObject)
+        return applyAttributes(NSAttributedStringKey.link.rawValue, value: link as AnyObject)
     }
     
     /**
@@ -562,7 +562,7 @@ open class Attributer {
      -parameter link: The NSString that will be forwarded to the UITextViewDelegate
      */
     open func link(_ link: NSString) -> Attributer {
-        return applyAttributes(NSLinkAttributeName, value: link)
+        return applyAttributes(NSAttributedStringKey.link.rawValue, value: link)
     }
     
     // MARK: - Style
@@ -580,7 +580,7 @@ open class Attributer {
      -parameter underline: The underline style
      */
     open func underline(_ underline: NSUnderlineStyle) -> Attributer {
-        return applyAttributes(NSUnderlineStyleAttributeName, value: underline.rawValue as AnyObject)
+        return applyAttributes(NSAttributedStringKey.underlineStyle.rawValue, value: underline.rawValue as AnyObject)
     }
     
     /**
@@ -589,7 +589,7 @@ open class Attributer {
      -parameter color: the UIColor of the undeline
      */
     open func underline(_ color: UIColor) -> Attributer {
-        return applyAttributes(NSUnderlineColorAttributeName, value: color)
+        return applyAttributes(NSAttributedStringKey.underlineColor.rawValue, value: color)
     }
     
     /**
@@ -598,7 +598,7 @@ open class Attributer {
      -parameter hex: the hex value of the color for the underline
      */
     open func underline(_ hex: Int) -> Attributer {
-        return applyAttributes(NSUnderlineColorAttributeName, value: colorFrom(hex: hex))
+        return applyAttributes(NSAttributedStringKey.underlineColor.rawValue, value: colorFrom(hex: hex))
     }
     
     /**
@@ -637,7 +637,7 @@ open class Attributer {
      -parameter shadow: The NSShadow that will be set
      */
     open func shadow(_ shadow: NSShadow) -> Attributer {
-        return applyAttributes(NSShadowAttributeName, value: shadow)
+        return applyAttributes(NSAttributedStringKey.shadow.rawValue, value: shadow)
     }
 
     /**
@@ -652,7 +652,7 @@ open class Attributer {
         shadow.shadowColor = color
         shadow.shadowOffset = offset
         shadow.shadowBlurRadius = blurRadius
-        return applyAttributes(NSShadowAttributeName, value: shadow)
+        return applyAttributes(NSAttributedStringKey.shadow.rawValue, value: shadow)
     }
     
     /**
@@ -662,7 +662,7 @@ open class Attributer {
      -parameter offset: The number of pixels that the text will be moved up or down.
      */
     open func baselineOffset(_ offset: NSNumber) -> Attributer {
-        return applyAttributes(NSBaselineOffsetAttributeName, value: offset)
+        return applyAttributes(NSAttributedStringKey.baselineOffset.rawValue, value: offset)
     }
     
     /**
@@ -672,7 +672,7 @@ open class Attributer {
      -parameter number: The number of pixels that will be between the letters.
      */
     open func kern(_ number: NSNumber) -> Attributer {
-        return applyAttributes(NSKernAttributeName, value: number)
+        return applyAttributes(NSAttributedStringKey.kern.rawValue, value: number)
     }
 
     /**
@@ -681,7 +681,7 @@ open class Attributer {
      -parameter number: The number of pixels the strikethrough will be high.
      */
     open func strikethrough(_ number: NSNumber) -> Attributer {
-        return applyAttributes(NSStrikethroughStyleAttributeName, value: number)
+        return applyAttributes(NSAttributedStringKey.strikethroughStyle.rawValue, value: number)
     }
     
     /**
@@ -690,7 +690,7 @@ open class Attributer {
      -parameter color: The strikethrough color.
      */
     open func strikethroughColor(_ color: UIColor) -> Attributer {
-        return applyAttributes(NSStrikethroughColorAttributeName, value: color)
+        return applyAttributes(NSAttributedStringKey.strikethroughColor.rawValue, value: color)
     }
     
     /**
@@ -699,7 +699,7 @@ open class Attributer {
      -parameter color: The stroke color.
      */
     open func strokeColor(_ color: UIColor) -> Attributer {
-        return applyAttributes(NSStrokeColorAttributeName, value: color)
+        return applyAttributes(NSAttributedStringKey.strokeColor.rawValue, value: color)
     }
 
     /**
@@ -708,7 +708,7 @@ open class Attributer {
      -parameter number: The stroke width.
      */
     open func strokeWidth(_ number: NSNumber) -> Attributer {
-        return applyAttributes(NSStrokeWidthAttributeName, value: number)
+        return applyAttributes(NSAttributedStringKey.strokeWidth.rawValue, value: number)
     }
 
     /**
@@ -716,7 +716,7 @@ open class Attributer {
      */
     open var letterpress: Attributer {
         get {
-            return applyAttributes(NSTextEffectAttributeName, value: NSTextEffectLetterpressStyle as NSString)
+            return applyAttributes(NSAttributedStringKey.textEffect.rawValue, value: NSAttributedString.TextEffectStyle.letterpressStyle as NSString)
         }
     }
     
@@ -726,7 +726,7 @@ open class Attributer {
      -parameter number: The obliqueness.
      */
     open func obliqueness(_ number: NSNumber) -> Attributer {
-        return applyAttributes(NSObliquenessAttributeName, value: number)
+        return applyAttributes(NSAttributedStringKey.obliqueness.rawValue, value: number)
     }
 
     /**
@@ -735,7 +735,7 @@ open class Attributer {
      -parameter number: The expansion.
      */
     open func expansion(_ number: NSNumber) -> Attributer {
-        return applyAttributes(NSExpansionAttributeName, value: number)
+        return applyAttributes(NSAttributedStringKey.expansion.rawValue, value: number)
     }
 
     /**
@@ -755,7 +755,7 @@ open class Attributer {
      -parameter color: The color.
      */
     open func backgroundColor(_ color: UIColor) -> Attributer {
-        return applyAttributes(NSBackgroundColorAttributeName, value: color)
+        return applyAttributes(NSAttributedStringKey.backgroundColor.rawValue, value: color)
     }
     
     /**
@@ -764,7 +764,7 @@ open class Attributer {
      -parameter number: The ligature.
      */
     open func ligature(_ number: NSNumber) -> Attributer {
-        return applyAttributes(NSLigatureAttributeName, value: number)
+        return applyAttributes(NSAttributedStringKey.ligature.rawValue, value: number)
     }
 
     /**
@@ -773,7 +773,7 @@ open class Attributer {
      -parameter attachment: The attachment.
      */
     open func attachment(_ attachment: NSTextAttachment) -> Attributer {
-        return applyAttributes(NSAttachmentAttributeName, value: attachment)
+        return applyAttributes(NSAttributedStringKey.attachment.rawValue, value: attachment)
     }
     
     /**
@@ -782,7 +782,7 @@ open class Attributer {
      -parameter directions: The directions.
      */
     open func writingDirection(_ directions: [NSNumber]) -> Attributer {
-        return applyAttributes(NSWritingDirectionAttributeName, value: directions as AnyObject)
+        return applyAttributes(NSAttributedStringKey.writingDirection.rawValue, value: directions as AnyObject)
     }
 
     
@@ -794,7 +794,7 @@ open class Attributer {
      -parameter paragraph: The paragraph style.
      */
     open func paragraph(_ paragraph: NSMutableParagraphStyle) -> Attributer {
-        return applyAttributes(NSParagraphStyleAttributeName, value: paragraph)
+        return applyAttributes(NSAttributedStringKey.paragraphStyle.rawValue, value: paragraph)
     }
 
     /**
@@ -1054,7 +1054,7 @@ open class Attributer {
     @discardableResult
     fileprivate func applyAttributes(_ attributeName: String, value: AnyObject) -> Attributer {
         for range in self.ranges {
-            self.attributedText.addAttribute(attributeName, value: value, range: range)
+            self.attributedText.addAttribute(NSAttributedStringKey(rawValue: attributeName), value: value, range: range)
         }
         return self
     }
