@@ -68,7 +68,7 @@ import UIKit
         
         // The icon needs this bounds in order to position it correctly
         let rect = CGRect(x: 0, y: -4, width: 20, height: 20)
-        
+
         // loop through the items and buildup the bulit list
         for (index, state) in states.enumerated() {
             

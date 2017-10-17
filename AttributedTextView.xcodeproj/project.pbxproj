@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1304F8A01F86096800347B42 /* CGFloatDP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1304F89F1F86096800347B42 /* CGFloatDP.swift */; };
+		1304F8A11F86096800347B42 /* CGFloatDP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1304F89F1F86096800347B42 /* CGFloatDP.swift */; };
+		1304F8A21F86096800347B42 /* CGFloatDP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1304F89F1F86096800347B42 /* CGFloatDP.swift */; };
+		1304F8A31F86096800347B42 /* CGFloatDP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1304F89F1F86096800347B42 /* CGFloatDP.swift */; };
 		3549BB501DA38A2000C63030 /* AttributedTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3549BB181DA3890B00C63030 /* AttributedTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3549BB511DA38A2000C63030 /* AttributedTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3549BB181DA3890B00C63030 /* AttributedTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3549BB521DA38A2100C63030 /* AttributedTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3549BB181DA3890B00C63030 /* AttributedTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1304F89F1F86096800347B42 /* CGFloatDP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatDP.swift; sourceTree = "<group>"; };
 		3549BB171DA3890B00C63030 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3549BB181DA3890B00C63030 /* AttributedTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributedTextView.h; sourceTree = "<group>"; };
 		3549BB211DA389CD00C63030 /* AttributedTextView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AttributedTextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +165,7 @@
 				7F1C64771DEC722F002A1A59 /* String+Attributer.swift */,
 				7F1C64781DEC722F002A1A59 /* AttributedTextView.swift */,
 				7FA506E51E695CEB003D83E7 /* AttributedLabel.swift */,
+				1304F89F1F86096800347B42 /* CGFloatDP.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -442,6 +448,7 @@
 				7FA506E61E695CEB003D83E7 /* AttributedLabel.swift in Sources */,
 				7F1C64801DEC722F002A1A59 /* String+Attributer.swift in Sources */,
 				7F1C64871DEC722F002A1A59 /* AttributedTextView.swift in Sources */,
+				1304F8A01F86096800347B42 /* CGFloatDP.swift in Sources */,
 				7F1C64791DEC722F002A1A59 /* Attributer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,6 +459,7 @@
 			files = (
 				7F1C64861DEC722F002A1A59 /* String+Attributer.swift in Sources */,
 				7F1C648D1DEC722F002A1A59 /* AttributedTextView.swift in Sources */,
+				1304F8A31F86096800347B42 /* CGFloatDP.swift in Sources */,
 				7F1C647F1DEC722F002A1A59 /* Attributer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,6 +470,7 @@
 			files = (
 				7F1C64821DEC722F002A1A59 /* String+Attributer.swift in Sources */,
 				7F1C64891DEC722F002A1A59 /* AttributedTextView.swift in Sources */,
+				1304F8A11F86096800347B42 /* CGFloatDP.swift in Sources */,
 				7F1C647B1DEC722F002A1A59 /* Attributer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +481,7 @@
 			files = (
 				7F1C64841DEC722F002A1A59 /* String+Attributer.swift in Sources */,
 				7F1C648B1DEC722F002A1A59 /* AttributedTextView.swift in Sources */,
+				1304F8A21F86096800347B42 /* CGFloatDP.swift in Sources */,
 				7F1C647D1DEC722F002A1A59 /* Attributer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -817,7 +827,7 @@
 				DEVELOPMENT_TEAM = NFYKDD8CR4;
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.evict.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
@@ -832,7 +842,7 @@
 				DEVELOPMENT_TEAM = NFYKDD8CR4;
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.evict.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
