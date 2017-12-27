@@ -55,9 +55,10 @@ class ViewController: UIViewController {
             .append("This is the first test. ").green
             .append("Tap on ").black
             .append("evict.nl").makeInteract { _ in
-                UIApplication.shared.open(URL(string: "http://evict.nl")!, options: [:], completionHandler: { completed in })
+                UIApplication.shared.open(URL(string: "http://evict.nl")!, options: [:] as [String: Any], completionHandler: { completed in })
             }.underline
             .append(" for testing links. Or tap on the 'next sample' link below ").black
+            .underline(.styleDouble, .patternDashDotDot)
         }
         .all.font(UIFont(name: "SourceSansPro-Regular", size: 16)) // Font not availabel in this demo...
         .setLinkColor(UIColor.purple) // Will be set on the control so we also have to reset it when we show the next sample.

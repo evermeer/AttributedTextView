@@ -584,6 +584,16 @@ open class Attributer {
     }
     
     /**
+     set the underline style for the active range (you also have to call .underline)
+     
+     -parameter style: The underline style
+     -parameter pattern : The underline pattern
+     */
+    open func underline(_ style: NSUnderlineStyle, _ pattern: NSUnderlineStyle) -> Attributer {
+        return applyAttributes(NSAttributedStringKey.underlineStyle.rawValue, value: NSNumber(value: (style.rawValue | pattern.rawValue)))
+    }
+    
+    /**
      set the underline color for the active range (you also have to call .underline)
      
      -parameter color: the UIColor of the undeline
