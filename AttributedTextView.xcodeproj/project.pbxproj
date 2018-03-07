@@ -54,7 +54,7 @@
 		3549BB481DA389F300C63030 /* AttributedTextView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AttributedTextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3549BB551DA38A5E00C63030 /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		7F198B63205035240009ACF3 /* NSAttributedString+Html.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Html.swift"; sourceTree = "<group>"; };
-		7F198B6520503D530009ACF3 /* Sample6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Sample6.png; path = "../../../../Pictures/SnapNDrag Library.snapndraglibrary/c9f57ebf2-fc/Sample6.png"; sourceTree = "<group>"; };
+		7F198B66205047F30009ACF3 /* Sample6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sample6.png; sourceTree = "<group>"; };
 		7F1C64761DEC722F002A1A59 /* Attributer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attributer.swift; sourceTree = "<group>"; };
 		7F1C64771DEC722F002A1A59 /* String+Attributer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Attributer.swift"; sourceTree = "<group>"; };
 		7F1C64781DEC722F002A1A59 /* AttributedTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedTextView.swift; sourceTree = "<group>"; };
@@ -203,12 +203,12 @@
 		7FDAE1341DEF192A00CB46B6 /* Screenshots */ = {
 			isa = PBXGroup;
 			children = (
+				7F198B66205047F30009ACF3 /* Sample6.png */,
 				7FDAE1351DEF192A00CB46B6 /* Sample1.png */,
 				7FDAE1361DEF192A00CB46B6 /* Sample2.png */,
 				7FDAE1371DEF192A00CB46B6 /* Sample3.png */,
 				7FDAE1381DEF192A00CB46B6 /* Sample4.png */,
 				7FD407AF1E0C280E00AEBF1B /* Sample5.png */,
-				7F198B6520503D530009ACF3 /* Sample6.png */,
 			);
 			path = Screenshots;
 			sourceTree = "<group>";

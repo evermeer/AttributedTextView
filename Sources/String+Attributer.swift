@@ -429,7 +429,7 @@ public extension String {
     -parameter style: The underline style
     -parameter pattern : The underline pattern
     */
-    open func underline(_ style: NSUnderlineStyle, _ pattern: NSUnderlineStyle) -> Attributer {
+    public func underline(_ style: NSUnderlineStyle, _ pattern: NSUnderlineStyle) -> Attributer {
         return attributer.underline(style, pattern)
     }
     
@@ -841,23 +841,23 @@ public extension String {
     
     /* Someone want this?
      @available(tvOS 7.0, *)
-     open var tabStops: [NSTextTab]!
+     public var tabStops: [NSTextTab]!
      
      @available(tvOS 7.0, *)
-     open var defaultTabInterval: CGFloat
+     public var defaultTabInterval: CGFloat
      
      @available(tvOS 9.0, *)
-     open var allowsDefaultTighteningForTruncation: Bool
-     
-     
-     @available(tvOS 9.0, *)
-     open func addTabStop(_ anObject: NSTextTab)
-     
-     @available(tvOS 9.0, *)
-     open func removeTabStop(_ anObject: NSTextTab)
+     public var allowsDefaultTighteningForTruncation: Bool
      
      
      @available(tvOS 9.0, *)
-     open func setParagraphStyle(_ obj: NSParagraphStyle)
+     public func addTabStop(_ anObject: NSTextTab)
+     
+     @available(tvOS 9.0, *)
+     public func removeTabStop(_ anObject: NSTextTab)
+     
+     
+     @available(tvOS 9.0, *)
+     public func setParagraphStyle(_ obj: NSParagraphStyle)
      */    
 }
