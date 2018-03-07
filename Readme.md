@@ -18,7 +18,7 @@
 [![eMail](https://img.shields.io/badge/email-edwin@evict.nl-blue.svg?style=flat)](mailto:edwin@evict.nl?SUBJECT=About%20EVReflection)
 
 
-Easiest way to create an attributed UITextView with support for multiple links.
+Easiest way to create an attributed UITextView (with support for multiple links and html).
 
 See the demo app and the playground for detailed information how to use AttributedTextView
 
@@ -130,6 +130,13 @@ textView1.attributer = "@test: What #hashtags do we have in @evermeer #Atributed
 
 ![animated](https://github.com/evermeer/AttributedTextView/blob/master/Screenshots/Sample4.png?raw=true)
 
+A html sample:
+
+```swift
+textView1.attributer = "My name is: <b>Edwin</b><br/>With a bulet list<br/><ul><li>item 1</li><li>item 2</li></ul>".html
+```
+
+![animated](https://github.com/evermeer/AttributedTextView/blob/master/Screenshots/Sample6.png?raw=true)
 
 Some other text formating samples:
 

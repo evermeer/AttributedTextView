@@ -16,6 +16,7 @@
 		3549BB521DA38A2100C63030 /* AttributedTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3549BB181DA3890B00C63030 /* AttributedTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3549BB531DA38A2200C63030 /* AttributedTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3549BB181DA3890B00C63030 /* AttributedTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3549BB561DA38A5E00C63030 /* Info-tvOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3549BB551DA38A5E00C63030 /* Info-tvOS.plist */; };
+		7F198B64205035240009ACF3 /* NSAttributedString+Html.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F198B63205035240009ACF3 /* NSAttributedString+Html.swift */; };
 		7F1C64791DEC722F002A1A59 /* Attributer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1C64761DEC722F002A1A59 /* Attributer.swift */; };
 		7F1C647B1DEC722F002A1A59 /* Attributer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1C64761DEC722F002A1A59 /* Attributer.swift */; };
 		7F1C647D1DEC722F002A1A59 /* Attributer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1C64761DEC722F002A1A59 /* Attributer.swift */; };
@@ -52,6 +53,8 @@
 		3549BB3B1DA389E800C63030 /* AttributedTextView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AttributedTextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3549BB481DA389F300C63030 /* AttributedTextView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AttributedTextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3549BB551DA38A5E00C63030 /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
+		7F198B63205035240009ACF3 /* NSAttributedString+Html.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Html.swift"; sourceTree = "<group>"; };
+		7F198B6520503D530009ACF3 /* Sample6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Sample6.png; path = "../../../../Pictures/SnapNDrag Library.snapndraglibrary/c9f57ebf2-fc/Sample6.png"; sourceTree = "<group>"; };
 		7F1C64761DEC722F002A1A59 /* Attributer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attributer.swift; sourceTree = "<group>"; };
 		7F1C64771DEC722F002A1A59 /* String+Attributer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Attributer.swift"; sourceTree = "<group>"; };
 		7F1C64781DEC722F002A1A59 /* AttributedTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedTextView.swift; sourceTree = "<group>"; };
@@ -166,6 +169,7 @@
 				7F1C64781DEC722F002A1A59 /* AttributedTextView.swift */,
 				7FA506E51E695CEB003D83E7 /* AttributedLabel.swift */,
 				1304F89F1F86096800347B42 /* CGFloatDP.swift */,
+				7F198B63205035240009ACF3 /* NSAttributedString+Html.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -204,6 +208,7 @@
 				7FDAE1371DEF192A00CB46B6 /* Sample3.png */,
 				7FDAE1381DEF192A00CB46B6 /* Sample4.png */,
 				7FD407AF1E0C280E00AEBF1B /* Sample5.png */,
+				7F198B6520503D530009ACF3 /* Sample6.png */,
 			);
 			path = Screenshots;
 			sourceTree = "<group>";
@@ -449,6 +454,7 @@
 				7F1C64801DEC722F002A1A59 /* String+Attributer.swift in Sources */,
 				7F1C64871DEC722F002A1A59 /* AttributedTextView.swift in Sources */,
 				1304F8A01F86096800347B42 /* CGFloatDP.swift in Sources */,
+				7F198B64205035240009ACF3 /* NSAttributedString+Html.swift in Sources */,
 				7F1C64791DEC722F002A1A59 /* Attributer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

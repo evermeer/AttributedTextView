@@ -95,11 +95,23 @@ textView1.attributer = rules.matchLinks
 attributedText = textView1.attributedText // View the details for this -->
 
 
+textView1.attributer = "And here we just do some tests with underline"
+   .underline(.styleDouble, .patternDashDotDot)
+attributedText = textView1.attributedText // View the details for this -->
 
 
 
+textView1.attributer = "Edwin".red.fontName("Baskerville").size(15)
+    .append("Edwin").gray.font(UIFont(name: "SourceSansPro-Regular", size: 15))
+    .append("Edwin").makeInteract({ _ in
+    }).fontName("Helvetica").size(15)
+    .setLinkColor(.orange)
+attributedText = textView1.attributedText // View the details for this -->
 
 
+
+textView1.attributer = "My name is: <b>Edwin</b><br/>With a bulet list<br/><ul><li>item 1</li><li>item 2</li></ul>".html
+attributedText = textView1.attributedText // View the details for this -->
 
 
 

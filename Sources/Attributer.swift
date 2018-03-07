@@ -412,6 +412,15 @@ open class Attributer {
     }
 
     /**
+     Append a string to the current attributed text and select the new string as the active range
+     
+     -parameter string: The string that will be added
+     */
+    open func appendHtml(_ string: String) -> Attributer {
+        return self.append(NSMutableAttributedString(html: string) ?? NSMutableAttributedString())
+    }
+    
+    /**
      Append an attributed string to the current attributed text and select the new string as the active range
      
      -parameter attributedString: The attributed string that will be added
