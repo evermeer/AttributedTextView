@@ -528,10 +528,11 @@ open class Attributer {
     open func makeInteract(_ callback: @escaping ((_ link: String) -> ())) -> Attributer {
         for nsRange in self.ranges {
             let iRange = self.attributedText.string.range(from: nsRange)
-            if let escapedString = self.attributedText.string.substring(with:  iRange!).addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlHostAllowed) {
+            let unEscapedString = self.attributedText.string.substring(with:  iRange!)
+                let escapedString = unEscapedString.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlHostAllowed) ?? ""
                 self.attributedText.addAttribute(NSAttributedStringKey.link, value: "AttributedTextView:\(escapedString)", range: nsRange)
-                urlCallbacks[escapedString] = callback
-            }
+                urlCallbacks[unEscapedString] = callback
+            
         }
         return self
     }
@@ -552,8 +553,8 @@ open class Attributer {
      -parameter URL: The URL that was touched
      */
     public func interactWithURL(URL: URL) {
-        let escapedString = URL.absoluteString.replacingOccurrences(of: "AttributedTextView:", with: "")
-        urlCallbacks[escapedString]?(escapedString)
+        let unescapedString = URL.absoluteString.replacingOccurrences(of: "AttributedTextView:", with: "").removingPercentEncoding ?? ""
+        urlCallbacks[unescapedString]?(unescapedString)
     }
     
     /**

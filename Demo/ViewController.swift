@@ -59,6 +59,9 @@ class ViewController: UIViewController {
             }.underline
             .append(" for testing links. Or tap on the 'next sample' link below ").black
             .underline(.styleDouble, .patternDashDotDot)
+            .append("[test]").makeInteract { text in
+                print("makeInteract : \(text)")
+            }
         }
         .all.font(UIFont(name: "SourceSansPro-Regular", size: 16)) // Font not availabel in this demo...
         .setLinkColor(UIColor.purple) // Will be set on the control so we also have to reset it when we show the next sample.
