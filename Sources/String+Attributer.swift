@@ -295,7 +295,7 @@ public extension String {
      
      -parameter string: The string that will be added
      */
-    public func append(_ string: String) -> Attributer {
+    public func append(string: String) -> Attributer {
         return attributer.append(string)
     }
     
