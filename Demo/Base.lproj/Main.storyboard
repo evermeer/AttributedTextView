@@ -47,7 +47,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There should be a checklist here" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMu-K3-dvr" customClass="AttributedLabelSubclassDemo" customModule="Demo" customModuleProvider="target">
-                                <rect key="frame" x="16" y="396" width="343" height="20.5"/>
+                                <rect key="frame" x="16" y="396" width="343" height="248.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

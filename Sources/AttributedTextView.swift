@@ -18,11 +18,13 @@ import UIKit
     // required when using @IBDesignable
     override public init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
+        super.delegate = self
     }
     
     // required when using @IBDesignable
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        super.delegate = self
     }
     
     // Make sure configureAttributedTextView is called right after activation from the storyboard.
@@ -75,7 +77,6 @@ import UIKit
             _attributer = newValue
             self.attributedText = _attributer?.attributedText
 
-            super.delegate = self
             self.isUserInteractionEnabled = true
             self.isSelectable = true
             self.isEditable = false
@@ -217,7 +218,7 @@ import UIKit
      -property shouldInteractWith: the NSTextAttachement
      -property characterRange: the NSRange for the selection
      */
-    @available(iOS, introduced: 7.0, deprecated: 10.0, message: "Use textView:shouldInteractWithURL:inRange:forInteractionType: instead")
+    @available(iOS, introduced: 7.0, deprecated: 10.0, message: "Use textView:shouldInteractWithTextAttachment:inRange:forInteractionType: instead")
     public func textView(_ textView: UITextView, shouldInteractWith textAttachment: NSTextAttachment, in characterRange: NSRange) -> Bool {
         return _delegate?.textView?(textView, shouldInteractWith: textAttachment, in: characterRange) ?? false
     }
