@@ -55,7 +55,11 @@ class ViewController: UIViewController {
             .append("This is the first test. ").green
             .append("Tap on ").black
             .append("evict.nl").makeInteract { _ in
-                UIApplication.shared.open(URL(string: "http://evict.nl")!, options: [:] as [String: Any], completionHandler: { completed in })
+                if #available(iOS 10, *) {
+                    UIApplication.shared.open(URL(string: "http://evict.nl")!, options: [:], completionHandler: {  (completed) in })
+                } else {
+                     _ = UIApplication.shared.openURL(URL(string: "http://evict.nl")!)
+                }
             }.underline
             .append(" for testing links. Or tap on the 'next sample' link below ").black
             .underline(.styleDouble, .patternDashDotDot)
@@ -94,11 +98,19 @@ class ViewController: UIViewController {
             + "@test: What #hashtags do we have in @evermeer #AtributedTextView library"
             .matchHashtags.underline
             .makeInteract { link in
-                UIApplication.shared.open(URL(string: "https://twitter.com/hashtag/\(link.replacingOccurrences(of: "%23", with: ""))")!, options: [:], completionHandler: { completed in })
+                if #available(iOS 10, *) {
+                    UIApplication.shared.open(URL(string: "https://twitter.com/hashtag/\(link.replacingOccurrences(of: "%23", with: ""))")!, options: [:], completionHandler: { completed in })
+                } else {
+                    _ = UIApplication.shared.openURL(URL(string: "https://twitter.com/hashtag/\(link.replacingOccurrences(of: "%23", with: ""))")!)
+                }
             }
             .matchMentions
             .makeInteract { link in
-                UIApplication.shared.open(URL(string: "https://twitter.com/\(link.replacingOccurrences(of: "%40", with: ""))")!, options: [:], completionHandler: { completed in })
+                if #available(iOS 10, *) {
+                    UIApplication.shared.open(URL(string: "https://twitter.com/\(link.replacingOccurrences(of: "%40", with: ""))")!, options: [:], completionHandler: { completed in })
+                } else {
+                    _ = UIApplication.shared.openURL(URL(string: "https://twitter.com/\(link.replacingOccurrences(of: "%40", with: ""))")!)
+                }
             }
         }
     }

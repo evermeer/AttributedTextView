@@ -372,7 +372,7 @@
 					};
 					7F652A741DEE09E900A1E61F = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = NFYKDD8CR4;
+						DevelopmentTeam = 6Z7QY98HTS;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -834,9 +834,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = NFYKDD8CR4;
+				DEVELOPMENT_TEAM = 6Z7QY98HTS;
 				INFOPLIST_FILE = Demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.evict.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -849,9 +849,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = NFYKDD8CR4;
+				DEVELOPMENT_TEAM = 6Z7QY98HTS;
 				INFOPLIST_FILE = Demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.evict.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

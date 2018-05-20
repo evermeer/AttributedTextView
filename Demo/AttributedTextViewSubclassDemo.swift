@@ -25,8 +25,12 @@ import UIKit
     override func configureAttributedTextView() {
         if let text = self.text, let linkText = self.linkText, let linkUrl = self.linkUrl {
             self.attributer = text.green.match(linkText).makeInteract { _ in
-                UIApplication.shared.open(URL(string: linkUrl)!, options: [:], completionHandler: { completed in })
+                if #available(iOS 10, *) {
+                    UIApplication.shared.open(URL(string: linkUrl)!, options: [:], completionHandler: { completed in })
+                } else {
+                    _ = UIApplication.shared.openURL(URL(string: linkUrl)!)
                 }
+            }
         } else {
             self.attributer = (self.text ?? "").green
         }
