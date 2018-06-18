@@ -41,6 +41,7 @@
 		7FA506E61E695CEB003D83E7 /* AttributedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA506E51E695CEB003D83E7 /* AttributedLabel.swift */; };
 		7FA506E81E696EA2003D83E7 /* AttributedTextViewSubclassDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA506E71E696EA2003D83E7 /* AttributedTextViewSubclassDemo.swift */; };
 		7FA506EA1E696EBD003D83E7 /* AttributedLabelSubclassDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA506E91E696EBD003D83E7 /* AttributedLabelSubclassDemo.swift */; };
+		7FA64F2E20D7DA7200E9345A /* String+NSRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA64F2D20D7DA7200E9345A /* String+NSRange.swift */; };
 		7FD407B01E0C280E00AEBF1B /* Sample5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FD407AF1E0C280E00AEBF1B /* Sample5.png */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		7FA506E51E695CEB003D83E7 /* AttributedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedLabel.swift; sourceTree = "<group>"; };
 		7FA506E71E696EA2003D83E7 /* AttributedTextViewSubclassDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedTextViewSubclassDemo.swift; sourceTree = "<group>"; };
 		7FA506E91E696EBD003D83E7 /* AttributedLabelSubclassDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedLabelSubclassDemo.swift; sourceTree = "<group>"; };
+		7FA64F2D20D7DA7200E9345A /* String+NSRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+NSRange.swift"; sourceTree = "<group>"; };
 		7FD407AF1E0C280E00AEBF1B /* Sample5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sample5.png; sourceTree = "<group>"; };
 		7FD880471DEF968500D299E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7FDAE1351DEF192A00CB46B6 /* Sample1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sample1.png; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				7FA506E51E695CEB003D83E7 /* AttributedLabel.swift */,
 				1304F89F1F86096800347B42 /* CGFloatDP.swift */,
 				7F198B63205035240009ACF3 /* NSAttributedString+Html.swift */,
+				7FA64F2D20D7DA7200E9345A /* String+NSRange.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				7F1C64871DEC722F002A1A59 /* AttributedTextView.swift in Sources */,
 				1304F8A01F86096800347B42 /* CGFloatDP.swift in Sources */,
 				7F198B64205035240009ACF3 /* NSAttributedString+Html.swift in Sources */,
+				7FA64F2E20D7DA7200E9345A /* String+NSRange.swift in Sources */,
 				7F1C64791DEC722F002A1A59 /* Attributer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
