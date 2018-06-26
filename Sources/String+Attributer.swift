@@ -420,7 +420,7 @@ public extension String {
      -parameter underline: The underline style
      */
     public func underline(_ underline: NSUnderlineStyle) -> Attributer {
-        return attributer.underline(underline)
+        return attributer.applyUnderline(underline)
     }
     
     /**
@@ -430,7 +430,7 @@ public extension String {
     -parameter pattern : The underline pattern
     */
     public func underline(_ style: NSUnderlineStyle, _ pattern: NSUnderlineStyle) -> Attributer {
-        return attributer.underline(style, pattern)
+        return attributer.applyUnderline(style, pattern)
     }
     
     /**
@@ -439,7 +439,7 @@ public extension String {
      -parameter color: the UIColor of the undeline
      */
     public func underline(_ color: UIColor) -> Attributer {
-        return attributer.underline(color)
+        return attributer.applyUnderline(color)
     }
     
     /**
@@ -448,7 +448,7 @@ public extension String {
      -parameter hex: the hex value of the color for the underline
      */
     public func underline(_ hex: Int) -> Attributer {
-        return attributer.underline(hex)
+        return attributer.applyUnderline(hex)
     }
     
     /**
