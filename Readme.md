@@ -1,5 +1,7 @@
 ## AttributedTextView
 
+⚠️ For Swift 4.2 / XCode 10 see the XCode10 branch ⚠️
+
 [![Issues](https://img.shields.io/github/issues-raw/evermeer/AttributedTextView.svg?style=flat)](https://github.com/evermeer/AttributedTextView/issues)
 [![Documentation](https://img.shields.io/badge/documented-99%-green.svg?style=flat)](http://cocoadocs.org/docsets/AttributedTextView)
 [![Stars](https://img.shields.io/github/stars/evermeer/AttributedTextView.svg?style=flat)](https://github.com/evermeer/AttributedTextView/stargazers)
