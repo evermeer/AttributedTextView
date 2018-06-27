@@ -363,6 +363,37 @@ open class Attributer {
     }
     
     /**
+     Find the all occurrances of any of the strings (search with using .CompareOptions)
+     
+     -parameter substring: An array of string to search for.
+     -parameter options: The search options
+     */
+    open func matchAnyWithOptions(_ substrings: [String], _ options: NSString.CompareOptions = .literal) -> Attributer {
+        let string = self.attributedText.string as NSString
+        ranges.removeAll()
+        for substring in substrings {
+            var range = string.range(of: substring, options: options)
+            ranges.append(range)
+            while range.length != 0 {
+                let location = range.location + range.length
+                let length = string.length - location
+                range = string.range(of: substring, options: options, range: NSRange(location: location, length: length))
+                ranges.append(range)
+            }
+        }
+        return self
+    }
+
+    /**
+     Find the all occurrances of any of the strings
+     
+     -parameter substring: The array of strings to search for.
+     */
+    open func matchAny(_ substrings: [String]) -> Attributer {
+        return matchAnyWithOptions(substrings)
+    }
+
+    /**
      Find the all hashtags (words beginning with #)
      */
     open var matchHashtags: Attributer {

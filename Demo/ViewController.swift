@@ -86,9 +86,11 @@ class ViewController: UIViewController {
     // We can select 1 or more ranges in an attributed text and apply a style to that.
     func showSample3() {
         attributedTextView.attributer = decorate(2) { content in return content
-            + "It is this or it is that where the word is is selected".size(20)
+            + "It is this or it is that where the word is is selected\n\n".size(20)
             .match("is").underline.underline(UIColor.red)
             .matchAll("is").strikethrough(4)
+            + "Select any of the qords quick, brown and lazy in: The quick brown fox jumps over the lazy dog".size(16)
+            .matchAny(["quick", "brown", "lazy"]).underline.underline(UIColor.red)
         }
     }
     

@@ -47,6 +47,12 @@ textView1.attributer = "It is this or it is that where the word is is selected".
     .matchAll("is").strikethrough(4)
 attributedText = textView1.attributedText // Vieuw the details for this -->
 
+// Match or matchAny
+textView1.attributer = "The quick brown fox jumps over the lazy dog".size(20)
+    .matchAny(["quick", "brown", "lazy"]).underline.underline(UIColor.red)
+attributedText = textView1.attributedText // Vieuw the details for this -->
+
+
 // Select hashtags or mentions
 textView1.attributer = "@test: What #hashtags do we have in @evermeer #AtributedTextView library"
     .matchHashtags.underline
