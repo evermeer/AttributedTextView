@@ -29,6 +29,13 @@ open class Attributer {
     fileprivate var urlCallbacks: [String : ((_ link: String) -> ())] = [:]
     
     /**
+     Do we have interactions
+     */
+    public func hasCallbacks() -> Bool {
+        return urlCallbacks.count > 0
+    }
+    
+    /**
      The current active ranges that will be influenced by all functions.
      */
     fileprivate var ranges: [NSRange] = [] {

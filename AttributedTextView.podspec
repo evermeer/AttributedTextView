@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
  s.name = 'AttributedTextView'
- s.version = '1.0.0'
+ s.version = '1.1.0'
  s.license = { :type => "MIT", :file => "LICENSE" }
  s.summary = 'Easiest way to create an attributed UILabel or UITextView (with support for multiple links and HTML)'
  s.homepage = 'https://github.com/evermeer/AttributedTextView'
