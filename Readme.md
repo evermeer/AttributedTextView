@@ -73,6 +73,15 @@ And like this all text will be size 20
 "red".red.append("blue").blue.all.size(20)
 ```
 
+### Clickable links
+When using AttributedTextView and creating links with .makeInteract, then you have to be aware that it will also automatically set the following properties which are needed for links to work.
+
+```swift
+isUserInteractionEnabled = true
+isSelectable = true
+isEditable = false
+```
+
 ### Sample code
 
 Here is a sample of some basic functions:
