@@ -32,6 +32,12 @@
 		7F2AA22C1E6B148600FCAABA /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F2AA2291E6B148600FCAABA /* check.png */; };
 		7F2AA22D1E6B148600FCAABA /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F2AA22A1E6B148600FCAABA /* cross.png */; };
 		7F2AA22E1E6B148600FCAABA /* warning.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F2AA22B1E6B148600FCAABA /* warning.png */; };
+		7F4C46762153A1D200EAAB65 /* NSAttributedString+Html.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F198B63205035240009ACF3 /* NSAttributedString+Html.swift */; };
+		7F4C46772153A1D300EAAB65 /* NSAttributedString+Html.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F198B63205035240009ACF3 /* NSAttributedString+Html.swift */; };
+		7F4C46782153A1D300EAAB65 /* NSAttributedString+Html.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F198B63205035240009ACF3 /* NSAttributedString+Html.swift */; };
+		7F4C46792153A1DA00EAAB65 /* String+NSRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA64F2D20D7DA7200E9345A /* String+NSRange.swift */; };
+		7F4C467A2153A1DB00EAAB65 /* String+NSRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA64F2D20D7DA7200E9345A /* String+NSRange.swift */; };
+		7F4C467B2153A1DB00EAAB65 /* String+NSRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA64F2D20D7DA7200E9345A /* String+NSRange.swift */; };
 		7F652A781DEE09E900A1E61F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F652A771DEE09E900A1E61F /* AppDelegate.swift */; };
 		7F652A7A1DEE09E900A1E61F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F652A791DEE09E900A1E61F /* ViewController.swift */; };
 		7F652A7D1DEE09E900A1E61F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F652A7B1DEE09E900A1E61F /* Main.storyboard */; };
@@ -470,7 +476,9 @@
 				7F1C64861DEC722F002A1A59 /* String+Attributer.swift in Sources */,
 				7F1C648D1DEC722F002A1A59 /* AttributedTextView.swift in Sources */,
 				1304F8A31F86096800347B42 /* CGFloatDP.swift in Sources */,
+				7F4C46782153A1D300EAAB65 /* NSAttributedString+Html.swift in Sources */,
 				7F1C647F1DEC722F002A1A59 /* Attributer.swift in Sources */,
+				7F4C467B2153A1DB00EAAB65 /* String+NSRange.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,7 +489,9 @@
 				7F1C64821DEC722F002A1A59 /* String+Attributer.swift in Sources */,
 				7F1C64891DEC722F002A1A59 /* AttributedTextView.swift in Sources */,
 				1304F8A11F86096800347B42 /* CGFloatDP.swift in Sources */,
+				7F4C46762153A1D200EAAB65 /* NSAttributedString+Html.swift in Sources */,
 				7F1C647B1DEC722F002A1A59 /* Attributer.swift in Sources */,
+				7F4C46792153A1DA00EAAB65 /* String+NSRange.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +502,9 @@
 				7F1C64841DEC722F002A1A59 /* String+Attributer.swift in Sources */,
 				7F1C648B1DEC722F002A1A59 /* AttributedTextView.swift in Sources */,
 				1304F8A21F86096800347B42 /* CGFloatDP.swift in Sources */,
+				7F4C46772153A1D300EAAB65 /* NSAttributedString+Html.swift in Sources */,
 				7F1C647D1DEC722F002A1A59 /* Attributer.swift in Sources */,
+				7F4C467A2153A1DB00EAAB65 /* String+NSRange.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,7 +677,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -685,7 +697,7 @@
 				PRODUCT_NAME = AttributedTextView;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -708,7 +720,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
@@ -732,7 +744,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
@@ -759,7 +771,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -783,7 +795,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -805,7 +817,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
@@ -828,7 +840,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
