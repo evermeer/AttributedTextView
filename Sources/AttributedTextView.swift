@@ -84,7 +84,7 @@ import UIKit
                 self.isEditable = false
             }
             if let color = _attributer?.linkColor {
-                self.linkTextAttributes = [NSAttributedString.Key.foregroundColor: color]
+                self.linkTextAttributes = [NSAttributedString.Key.foregroundColor.rawValue: color as Any]
             }
         }
     }

@@ -618,7 +618,7 @@ open class Attributer {
      underline the active range
      */
     open var underline: Attributer {
-        return applyUnderline(NSUnderlineStyle.single)
+        return applyUnderline(NSUnderlineStyle.styleSingle)
     }
     
     /**
