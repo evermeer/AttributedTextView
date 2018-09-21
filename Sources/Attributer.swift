@@ -618,7 +618,7 @@ open class Attributer {
      underline the active range
      */
     open var underline: Attributer {
-        return applyUnderline(NSUnderlineStyle.styleSingle)
+        return applyUnderline(NSUnderlineStyle.single)
     }
     
     /**
@@ -626,8 +626,8 @@ open class Attributer {
      
      -parameter underline: The underline style
      */
-    open func applyUnderline(_ underline: NSUnderlineStyle) -> Attributer {
-        return applyAttributes(NSAttributedString.Key.underlineStyle.rawValue, value: underline.rawValue as AnyObject)
+    open func applyUnderline(_ style: NSUnderlineStyle) -> Attributer {
+        return applyAttributes(NSAttributedString.Key.underlineStyle.rawValue, value: style.rawValue as AnyObject)
     }
     
     /**
