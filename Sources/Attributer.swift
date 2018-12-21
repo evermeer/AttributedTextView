@@ -565,6 +565,7 @@ open class Attributer {
      */
     open func makeInteract(_ callback: @escaping ((_ link: String) -> ())) -> Attributer {
         for nsRange in self.ranges {
+            guard nsRange.location != NSNotFound else { return self }
             let unEscapedString = (self.attributedText.string as NSString).substring(with: nsRange)
                 let escapedString = unEscapedString.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlHostAllowed) ?? ""
             self.attributedText.addAttribute(NSAttributedString.Key.link, value: "AttributedTextView:\(escapedString)", range: nsRange)
