@@ -114,7 +114,7 @@ import UIKit
      -property textView: The UITextView where the delegate is called on
      */
     public func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
-        return _delegate?.textViewShouldBeginEditing?(textView) ?? false
+        return _delegate?.textViewShouldBeginEditing?(textView) ?? self.isEditable
     }
     
     /**
@@ -123,7 +123,7 @@ import UIKit
      -property textView: The UITextView where the delegate is called on
      */
     public func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
-        return _delegate?.textViewShouldEndEditing?(textView) ?? false
+        return _delegate?.textViewShouldEndEditing?(textView) ?? self.isEditable
     }
     
     /**
@@ -153,7 +153,7 @@ import UIKit
      -property replacementText: the replacement text
      */
     public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        return _delegate?.textView?(textView, shouldChangeTextIn: range, replacementText: text) ?? false
+        return _delegate?.textView?(textView, shouldChangeTextIn: range, replacementText: text) ?? self.isEditable
     }
     
     /**

@@ -618,7 +618,7 @@ open class Attributer {
      underline the active range
      */
     open var underline: Attributer {
-        return applyUnderline(NSUnderlineStyle.single)
+        return underline(NSUnderlineStyle.single)
     }
     
     /**
@@ -626,7 +626,7 @@ open class Attributer {
      
      -parameter underline: The underline style
      */
-    open func applyUnderline(_ style: NSUnderlineStyle) -> Attributer {
+    open func underline(_ style: NSUnderlineStyle) -> Attributer {
         return applyAttributes(NSAttributedString.Key.underlineStyle.rawValue, value: style.rawValue as AnyObject)
     }
     
@@ -636,7 +636,7 @@ open class Attributer {
      -parameter style: The underline style
      -parameter pattern : The underline pattern
      */
-    open func applyUnderline(_ style: NSUnderlineStyle, _ pattern: NSUnderlineStyle) -> Attributer {
+    open func underline(_ style: NSUnderlineStyle, _ pattern: NSUnderlineStyle) -> Attributer {
         return applyAttributes(NSAttributedString.Key.underlineStyle.rawValue, value: NSNumber(value: (style.rawValue | pattern.rawValue)))
     }
     
@@ -645,7 +645,7 @@ open class Attributer {
      
      -parameter color: the UIColor of the undeline
      */
-    open func applyUnderline(_ color: UIColor) -> Attributer {
+    open func underline(_ color: UIColor) -> Attributer {
         return applyAttributes(NSAttributedString.Key.underlineColor.rawValue, value: color)
     }
     
@@ -654,7 +654,7 @@ open class Attributer {
      
      -parameter hex: the hex value of the color for the underline
      */
-    open func applyUnderline(_ hex: Int) -> Attributer {
+    open func underline(_ hex: Int) -> Attributer {
         return applyAttributes(NSAttributedString.Key.underlineColor.rawValue, value: colorFrom(hex: hex))
     }
     
@@ -1150,7 +1150,7 @@ public extension String {
      
      -parameter nsRange: The NSRange that needs to be converted
      */
-    public func range(from nsRange: NSRange) -> Range<String.Index>? {
+    func range(from nsRange: NSRange) -> Range<String.Index>? {
         guard
             let from16 = utf16.index(utf16.startIndex, offsetBy: nsRange.location, limitedBy: utf16.endIndex),
             let to16 = utf16.index(from16, offsetBy: nsRange.length, limitedBy: utf16.endIndex),
@@ -1170,7 +1170,7 @@ public extension UIColor {
 
      -parameter hex: The hex value (like 0xffffff) that wil be used for the color
      */
-    public convenience init(hex: Int) {
+    convenience init(hex: Int) {
         let red = CGFloat((hex & 0xff0000) >> 16) / 255.0
         let green = CGFloat((hex & 0x00ff00) >> 8) / 255.0
         let blue = CGFloat(hex & 0x0000ff) / 255.0

@@ -62,7 +62,7 @@ class ViewController: UIViewController {
                 }
             }.underline
             .append(" for testing links. Or tap on the 'next sample' link below ").black
-            .applyUnderline(.double, .patternDashDotDot)
+            .underline(.double, .patternDashDotDot)
             .append("[test]").makeInteract { text in
                 print("makeInteract : \(text)")
             }
@@ -88,11 +88,11 @@ class ViewController: UIViewController {
         attributedTextView.attributer = decorate(2) { content in return content
             + "It is this or it is that where the word is is selected\n\n".size(20)
                 .match("is").underline
-                .applyUnderline(UIColor.red)
+                .underline(UIColor.red)
             .matchAll("is").strikethrough(4)
             + "Select any of the qords quick, brown and lazy in: The quick brown fox jumps over the lazy dog".size(16)
             .matchAny(["quick", "brown", "lazy"]).underline
-                .applyUnderline(UIColor.red)
+                .underline(UIColor.red)
         }
     }
     

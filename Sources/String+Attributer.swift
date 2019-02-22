@@ -12,7 +12,7 @@ public extension String {
     /**
      Easy access to the Attributer object
      */
-    public var attributer: Attributer {
+    var attributer: Attributer {
         get {
             return Attributer(self)
         }
@@ -26,7 +26,7 @@ public extension String {
     /**
      Apply the color black to the active range(es)
      */
-    public var black: Attributer {
+    var black: Attributer {
         get {
             return attributer.black
         }
@@ -35,7 +35,7 @@ public extension String {
     /**
      Apply the color darkGray to the active range(es)
      */
-    public var darkGray: Attributer {
+    var darkGray: Attributer {
         get {
             return attributer.darkGray
         }
@@ -44,7 +44,7 @@ public extension String {
     /**
      Apply the color lightGray to the active range(es)
      */
-    public var lightGray: Attributer {
+    var lightGray: Attributer {
         get {
             return attributer.lightGray
         }
@@ -53,7 +53,7 @@ public extension String {
     /**
      Apply the color white to the active range(es)
      */
-    public var white: Attributer {
+    var white: Attributer {
         get {
             return attributer.white
         }
@@ -62,7 +62,7 @@ public extension String {
     /**
      Apply the color gray to the active range(es)
      */
-    public var gray: Attributer {
+    var gray: Attributer {
         get {
             return attributer.gray
         }
@@ -71,7 +71,7 @@ public extension String {
     /**
      Apply the color red to the active range(es)
      */
-    public var red: Attributer {
+    var red: Attributer {
         get {
             return attributer.red
         }
@@ -80,7 +80,7 @@ public extension String {
     /**
      Apply the color green to the active range(es)
      */
-    public var green: Attributer {
+    var green: Attributer {
         get {
             return attributer.green
         }
@@ -89,7 +89,7 @@ public extension String {
     /**
      Apply the color blue to the active range(es)
      */
-    public var blue: Attributer {
+    var blue: Attributer {
         get {
             return attributer.blue
         }
@@ -98,7 +98,7 @@ public extension String {
     /**
      Apply the color cyan to the active range(es)
      */
-    public var cyan: Attributer {
+    var cyan: Attributer {
         get {
             return attributer.cyan
         }
@@ -107,7 +107,7 @@ public extension String {
     /**
      Apply the color yellow to the active range(es)
      */
-    public var yellow: Attributer {
+    var yellow: Attributer {
         get {
             return attributer.yellow
         }
@@ -116,7 +116,7 @@ public extension String {
     /**
      Apply the color magenta to the active range(es)
      */
-    public var magenta: Attributer {
+    var magenta: Attributer {
         get {
             return attributer.magenta
         }
@@ -125,7 +125,7 @@ public extension String {
     /**
      Apply the color orange to the active range(es)
      */
-    public var orange: Attributer {
+    var orange: Attributer {
         get {
             return attributer.orange
         }
@@ -134,7 +134,7 @@ public extension String {
     /**
      Apply the color purple to the active range(es)
      */
-    public var purple: Attributer {
+    var purple: Attributer {
         get {
             return attributer.purple
         }
@@ -143,7 +143,7 @@ public extension String {
     /**
      Apply the color brown to the active range(es)
      */
-    public var brown: Attributer {
+    var brown: Attributer {
         get {
             return attributer.brown
         }
@@ -152,7 +152,7 @@ public extension String {
     /**
      Apply the color clear to the active range(es)
      */
-    public var clear: Attributer {
+    var clear: Attributer {
         get {
             return attributer.clear
         }
@@ -163,7 +163,7 @@ public extension String {
      
      -parameter color: The UIColor that will be applied.
      */
-    public func color(_ color: UIColor) -> Attributer {
+    func color(_ color: UIColor) -> Attributer {
         return attributer.color(color)
     }
     
@@ -172,7 +172,7 @@ public extension String {
      
      -parameter hex: The hex value of the color that will be applied.
      */
-    public func color(_ hex: Int) -> Attributer {
+    func color(_ hex: Int) -> Attributer {
         return attributer.color(hex)
     }
     
@@ -181,7 +181,7 @@ public extension String {
     /**
      Make the active range the entire text
      */
-    public var all: Attributer {
+    var all: Attributer {
         get {
             return attributer.all
         }
@@ -193,7 +193,7 @@ public extension String {
      -parameter from: The start of the new range
      -parameter to: The end of the new range.
      */
-    public func range(_ from: Int, to: Int) -> Attributer {
+    func range(_ from: Int, to: Int) -> Attributer {
         return attributer.range(from, to: to)
     }
     
@@ -203,7 +203,7 @@ public extension String {
      -parameter location: The location of the new range
      -parameter length: The length of the new range.
      */
-    public func range(_ location: Int, length: Int) -> Attributer {
+    func range(_ location: Int, length: Int) -> Attributer {
         return attributer.range(location, length: length)
     }
     
@@ -212,7 +212,7 @@ public extension String {
      
      -parameter range: The new range.
      */
-    public func range(_ range: NSRange) -> Attributer {
+    func range(_ range: NSRange) -> Attributer {
         return attributer.range(range)
     }
     
@@ -222,7 +222,7 @@ public extension String {
      -parameter substring: The string to search for.
      -parameter options: The search options
      */
-    public func matchWithOptions(_ substring: String, _ options: NSString.CompareOptions = .literal) -> Attributer {
+    func matchWithOptions(_ substring: String, _ options: NSString.CompareOptions = .literal) -> Attributer {
         return attributer.matchWithOptions(substring, options)
     }
     
@@ -231,7 +231,7 @@ public extension String {
      
      -parameter substring: The string to search for.
      */
-    public func match(_ substring: String) -> Attributer {
+    func match(_ substring: String) -> Attributer {
         return attributer.match(substring)
     }
     
@@ -241,7 +241,7 @@ public extension String {
      -parameter substring: The string to search for.
      -parameter options: The search options
      */
-    public func matchAllWithOptions(_ substring: String, _ options: NSString.CompareOptions = .literal) -> Attributer {
+    func matchAllWithOptions(_ substring: String, _ options: NSString.CompareOptions = .literal) -> Attributer {
         return attributer.matchAllWithOptions(substring, options)
     }
     
@@ -250,14 +250,14 @@ public extension String {
      
      -parameter substring: The string to search for.
      */
-    public func matchAll(_ substring: String) -> Attributer {
+    func matchAll(_ substring: String) -> Attributer {
         return attributer.matchAll(substring)
     }
     
     /**
      Find the all hashtags (words beginning with #)
      */
-    public var matchHashtags: Attributer {
+    var matchHashtags: Attributer {
         get {
             return attributer.matchHashtags
         }
@@ -266,7 +266,7 @@ public extension String {
     /**
      Find the all mentions (words beginning with @)
      */
-    public var matchMentions: Attributer {
+    var matchMentions: Attributer {
         get {
             return attributer.matchMentions
         }
@@ -275,7 +275,7 @@ public extension String {
     /**
      Find the all links
      */
-    public var matchLinks: Attributer {
+    var matchLinks: Attributer {
         get {
             return attributer.matchLinks
         }
@@ -286,7 +286,7 @@ public extension String {
      
      -parameter pattern: The regex pattern.
      */
-    public func matchPattern(_ pattern: String) -> Attributer {
+    func matchPattern(_ pattern: String) -> Attributer {
         return attributer.matchPattern(pattern)
     }
     
@@ -295,7 +295,7 @@ public extension String {
      
      -parameter string: The string that will be added
      */
-    public func append(string: String) -> Attributer {
+    func append(string: String) -> Attributer {
         return attributer.append(string)
     }
     
@@ -304,7 +304,7 @@ public extension String {
      
      -parameter attributedString: The attributed string that will be added
      */
-    public func append(_ attributedString: NSMutableAttributedString) -> Attributer {
+    func append(_ attributedString: NSMutableAttributedString) -> Attributer {
         return attributer.append(attributedString)
     }
     
@@ -313,7 +313,7 @@ public extension String {
      
      -parameter attributer: The Attributer that will be added
      */
-    public func append(_ attributer: Attributer) -> Attributer {
+    func append(_ attributer: Attributer) -> Attributer {
         return attributer.append(attributer)
     }
     
@@ -325,7 +325,7 @@ public extension String {
      
      -parameter fontName: The name of the font that will be applied
      */
-    public func fontName(_ fontName: String) -> Attributer {
+    func fontName(_ fontName: String) -> Attributer {
         return attributer.fontName(fontName)
     }
     
@@ -334,7 +334,7 @@ public extension String {
      
      -parameter size: The fontsize that will be applied
      */
-    public func size(_ size: CGFloat) -> Attributer {
+    func size(_ size: CGFloat) -> Attributer {
         return attributer.size(size)
     }
     
@@ -343,7 +343,7 @@ public extension String {
      
      -parameter font: The UIFont that will be applied
      */
-    public func font(_ font: UIFont) -> Attributer {
+    func font(_ font: UIFont) -> Attributer {
         return attributer.font(font)
     }
 
@@ -356,7 +356,7 @@ public extension String {
      -parameter scheme: The scheme that will be added in front of the link
      */
     @available(*, deprecated, message: "use AttributedTextView with makeInteract: instead")
-    public func makeInteractWithURLforScheme(_ scheme: String) -> Attributer {
+    func makeInteractWithURLforScheme(_ scheme: String) -> Attributer {
         return attributer.makeInteractWithURLforScheme(scheme)
     }
     
@@ -365,7 +365,7 @@ public extension String {
      
      -parameter callback: The callback function that will be called when using AttributedTextView
      */
-    public func makeInteract(_ callback: @escaping ((_ link: String) -> ())) -> Attributer {
+    func makeInteract(_ callback: @escaping ((_ link: String) -> ())) -> Attributer {
         return attributer.makeInteract(callback)
     }
     
@@ -374,7 +374,7 @@ public extension String {
      
      -parameter color: The color of all links
      */
-    public func setLinkColor(_ color: UIColor) -> Attributer {
+    func setLinkColor(_ color: UIColor) -> Attributer {
         return attributer.setLinkColor(color)
     }
     
@@ -383,7 +383,7 @@ public extension String {
      
      -parameter URL: The URL that was touched
      */
-    public func interactWithURL(URL: URL) {
+    func interactWithURL(URL: URL) {
         return attributer.interactWithURL(URL: URL)
     }
     
@@ -392,7 +392,7 @@ public extension String {
      
      -parameter link: The URL that will be forwarded to the UITextViewDelegate
      */
-    public func link(_ link: URL) -> Attributer {
+    func link(_ link: URL) -> Attributer {
         return attributer.link(link)
     }
     
@@ -401,7 +401,7 @@ public extension String {
      
      -parameter link: The NSString that will be forwarded to the UITextViewDelegate
      */
-    public func link(_ link: NSString) -> Attributer {
+    func link(_ link: NSString) -> Attributer {
         return attributer.link(link)
     }
 
@@ -410,7 +410,7 @@ public extension String {
     /**
      underline the active range
      */
-    public var underline: Attributer {
+    var underline: Attributer {
         return attributer.underline
     }
     
@@ -419,8 +419,8 @@ public extension String {
      
      -parameter underline: The underline style
      */
-    public func underline(_ underline: NSUnderlineStyle) -> Attributer {
-        return attributer.applyUnderline(underline)
+    func underline(_ underline: NSUnderlineStyle) -> Attributer {
+        return attributer.underline(underline)
     }
     
     /**
@@ -429,8 +429,8 @@ public extension String {
     -parameter style: The underline style
     -parameter pattern : The underline pattern
     */
-    public func underline(_ style: NSUnderlineStyle, _ pattern: NSUnderlineStyle) -> Attributer {
-        return attributer.applyUnderline(style, pattern)
+    func underline(_ style: NSUnderlineStyle, _ pattern: NSUnderlineStyle) -> Attributer {
+        return attributer.underline(style, pattern)
     }
     
     /**
@@ -438,8 +438,8 @@ public extension String {
      
      -parameter color: the UIColor of the undeline
      */
-    public func underline(_ color: UIColor) -> Attributer {
-        return attributer.applyUnderline(color)
+    func underline(_ color: UIColor) -> Attributer {
+        return attributer.underline(color)
     }
     
     /**
@@ -447,8 +447,8 @@ public extension String {
      
      -parameter hex: the hex value of the color for the underline
      */
-    public func underline(_ hex: Int) -> Attributer {
-        return attributer.applyUnderline(hex)
+    func underline(_ hex: Int) -> Attributer {
+        return attributer.underline(hex)
     }
     
     /**
@@ -456,7 +456,7 @@ public extension String {
      
      -parameter image: the UIImage that will be used as the attachment
      */
-    public func attach(_ image: UIImage?, bounds: CGRect? = nil) -> Attributer {
+    func attach(_ image: UIImage?, bounds: CGRect? = nil) -> Attributer {
         return attributer.attach(image, bounds: bounds)
     }
     
@@ -465,7 +465,7 @@ public extension String {
      
      -parameter imageStr: the name of the image that will be used as the attachment
      */
-    public func attach(_ imageStr: String, bounds: CGRect? = nil) -> Attributer {
+    func attach(_ imageStr: String, bounds: CGRect? = nil) -> Attributer {
         return attributer.attach(imageStr, bounds: bounds)
     }
     
@@ -474,7 +474,7 @@ public extension String {
      
      -parameter shadow: The NSShadow that will be set
      */
-    public func shadow(_ shadow: NSShadow) -> Attributer {
+    func shadow(_ shadow: NSShadow) -> Attributer {
         return attributer.shadow(shadow)
     }
     
@@ -485,7 +485,7 @@ public extension String {
      -parameter offset: The CGSize offset for the shadow
      -parameter blurRadius: The blurRadius for the shadow
      */
-    public  func shadow(color: UIColor?, offset: CGSize, blurRadius: CGFloat) -> Attributer {
+    func shadow(color: UIColor?, offset: CGSize, blurRadius: CGFloat) -> Attributer {
         return attributer.shadow(color: color, offset: offset, blurRadius: blurRadius)
     }
     
@@ -495,7 +495,7 @@ public extension String {
      
      -parameter offset: The number of pixels that the text will be moved up or down.
      */
-    public func baselineOffset(_ offset: NSNumber) -> Attributer {
+    func baselineOffset(_ offset: NSNumber) -> Attributer {
         return attributer.baselineOffset(offset)
     }
     
@@ -505,7 +505,7 @@ public extension String {
      
      -parameter number: The number of pixels that will be between the letters.
      */
-    public func kern(_ number: NSNumber) -> Attributer {
+    func kern(_ number: NSNumber) -> Attributer {
         return attributer.kern(number)
     }
     
@@ -514,7 +514,7 @@ public extension String {
      
      -parameter number: The number of pixels the strikethrough will be high.
      */
-    public func strikethrough(_ number: NSNumber) -> Attributer {
+    func strikethrough(_ number: NSNumber) -> Attributer {
         return attributer.strikethrough(number)
     }
 
@@ -524,7 +524,7 @@ public extension String {
      
      -parameter color: The color of the striketrhough.
      */
-    public func strikethroughColor(_ color: UIColor) -> Attributer {
+    func strikethroughColor(_ color: UIColor) -> Attributer {
         return attributer.strikethroughColor(color)
     }
     
@@ -533,7 +533,7 @@ public extension String {
      
      -parameter color: The stroke color.
      */
-    public func strokeColor(_ color: UIColor) -> Attributer {
+    func strokeColor(_ color: UIColor) -> Attributer {
         return attributer.strokeColor(color)
     }
     
@@ -542,14 +542,14 @@ public extension String {
      
      -parameter number: The stroke width.
      */
-    public func strokeWidth(_ number: NSNumber) -> Attributer {
+    func strokeWidth(_ number: NSNumber) -> Attributer {
         return attributer.strokeWidth(number)
     }
     
     /**
      Set the style to letterpress
      */
-    public var letterpress: Attributer {
+    var letterpress: Attributer {
         get {
             return attributer.letterpress
         }
@@ -560,7 +560,7 @@ public extension String {
      
      -parameter number: The obliqueness.
      */
-    public func obliqueness(_ number: NSNumber) -> Attributer {
+    func obliqueness(_ number: NSNumber) -> Attributer {
         return attributer.obliqueness(number)
     }
     
@@ -569,7 +569,7 @@ public extension String {
      
      -parameter number: The expansion.
      */
-    public func expansion(_ number: NSNumber) -> Attributer {
+    func expansion(_ number: NSNumber) -> Attributer {
         return attributer.expansion(number)
     }
     
@@ -586,7 +586,7 @@ public extension String {
      
      -parameter color: The color.
      */
-    public func backgroundColor(_ color: UIColor) -> Attributer {
+    func backgroundColor(_ color: UIColor) -> Attributer {
         return attributer.backgroundColor(color)
     }
     
@@ -595,7 +595,7 @@ public extension String {
      
      -parameter number: The ligature.
      */
-    public func ligature(_ number: NSNumber) -> Attributer {
+    func ligature(_ number: NSNumber) -> Attributer {
         return attributer.ligature(number)
     }
     
@@ -604,7 +604,7 @@ public extension String {
      
      -parameter attachment: The attachment.
      */
-    public func attachment(_ attachment: NSTextAttachment) -> Attributer {
+    func attachment(_ attachment: NSTextAttachment) -> Attributer {
         return attributer.attachment(attachment)
     }
     
@@ -613,7 +613,7 @@ public extension String {
      
      -parameter directions: The directions.
      */
-    public func writingDirection(_ directions: [NSNumber]) -> Attributer {
+    func writingDirection(_ directions: [NSNumber]) -> Attributer {
         return attributer.writingDirection(directions)
     }
     
@@ -625,14 +625,14 @@ public extension String {
      
      -parameter paragraph: The paragraph style.
      */
-    public func paragraph(_ paragraph: NSMutableParagraphStyle) -> Attributer {
+    func paragraph(_ paragraph: NSMutableParagraphStyle) -> Attributer {
         return attributer.paragraph(paragraph)
     }
     
     /**
      Apply the paragraph stylings that have been set by all the paragraph functions
      */
-    public var paragraphApplyStyling: Attributer {
+    var paragraphApplyStyling: Attributer {
         get {
             return attributer.paragraphApplyStyling
         }
@@ -641,7 +641,7 @@ public extension String {
     /**
      Align the paragraph in the center
      */
-    public var paragraphAlignCenter: Attributer {
+    var paragraphAlignCenter: Attributer {
         get {
             return attributer.paragraphAlignCenter
         }
@@ -650,7 +650,7 @@ public extension String {
     /**
      Align the paragraph right
      */
-    public var paragraphAlignRight: Attributer {
+    var paragraphAlignRight: Attributer {
         get {
             return attributer.paragraphAlignRight
         }
@@ -659,7 +659,7 @@ public extension String {
     /**
      Align the paragraph left
      */
-    public var paragraphAlignLeft: Attributer {
+    var paragraphAlignLeft: Attributer {
         get {
             return attributer.paragraphAlignLeft
         }
@@ -668,7 +668,7 @@ public extension String {
     /**
      Align the paragraph justified
      */
-    public var paragraphAlignJustified: Attributer {
+    var paragraphAlignJustified: Attributer {
         get {
             return attributer.paragraphAlignJustified
         }
@@ -677,7 +677,7 @@ public extension String {
     /**
      Align the paragraph Natural
      */
-    public var paragraphAlignNatural: Attributer {
+    var paragraphAlignNatural: Attributer {
         get {
             return attributer.paragraphAlignNatural
         }
@@ -686,42 +686,42 @@ public extension String {
     /**
      Set the paragraph line spacing
      */
-    public func paragraphLineSpacing(_ number: CGFloat) -> Attributer {
+    func paragraphLineSpacing(_ number: CGFloat) -> Attributer {
         return attributer.paragraphLineSpacing(number)
     }
     
     /**
      Set the paragraph spacing
      */
-    public func paragraphSpacing(_ number: CGFloat) -> Attributer {
+    func paragraphSpacing(_ number: CGFloat) -> Attributer {
         return attributer.paragraphSpacing(number)
     }
     
     /**
      Set the paragraph first line head indent
      */
-    public func paragraphFirstLineHeadIndent(_ number: CGFloat) -> Attributer {
+    func paragraphFirstLineHeadIndent(_ number: CGFloat) -> Attributer {
         return attributer.paragraphFirstLineHeadIndent(number)
     }
     
     /**
      Set the paragraph head indent
      */
-    public func paragraphHeadIndent(_ number: CGFloat) -> Attributer {
+    func paragraphHeadIndent(_ number: CGFloat) -> Attributer {
         return attributer.paragraphHeadIndent(number)
     }
     
     /**
      Set the paragraph tail indent
      */
-    public func paragraphTailIndent(_ number: CGFloat) -> Attributer {
+    func paragraphTailIndent(_ number: CGFloat) -> Attributer {
         return attributer.paragraphTailIndent(number)
     }
     
     /**
      Set the paragraph linebreak mode to word wrapping
      */
-    public var paragraphLineBreakModeWordWrapping: Attributer {
+    var paragraphLineBreakModeWordWrapping: Attributer {
         get {
             return attributer.paragraphLineBreakModeWordWrapping
         }
@@ -730,7 +730,7 @@ public extension String {
     /**
      Set the paragraph linebreak mode to character wrapping
      */
-    public var paragraphLineBreakModeCharWrapping: Attributer {
+    var paragraphLineBreakModeCharWrapping: Attributer {
         get {
             return attributer.paragraphLineBreakModeCharWrapping
         }
@@ -739,7 +739,7 @@ public extension String {
     /**
      Set the paragraph linebreak mode to clipping
      */
-    public var paragraphLineBreakModeClipping: Attributer {
+    var paragraphLineBreakModeClipping: Attributer {
         get {
             return attributer.paragraphLineBreakModeClipping
         }
@@ -748,7 +748,7 @@ public extension String {
     /**
      Set the paragraph linebreak mode to truncate head
      */
-    public var paragraphLineBreakTruncatingHead: Attributer {
+    var paragraphLineBreakTruncatingHead: Attributer {
         get {
             return attributer.paragraphLineBreakTruncatingHead
         }
@@ -757,7 +757,7 @@ public extension String {
     /**
      Set the paragraph linebreak mode to truncate tail
      */
-    public var paragraphLineBreakTruncatingTail: Attributer {
+    var paragraphLineBreakTruncatingTail: Attributer {
         get {
             return attributer.paragraphLineBreakTruncatingTail
         }
@@ -766,7 +766,7 @@ public extension String {
     /**
      Set the paragraph linebreak mode to truncate midle
      */
-    public var paragraphLineBreakTruncatingMiddle: Attributer {
+    var paragraphLineBreakTruncatingMiddle: Attributer {
         get {
             return attributer.paragraphLineBreakTruncatingMiddle
         }
@@ -775,21 +775,21 @@ public extension String {
     /**
      Set the paragraph minimum line height
      */
-    public func paragraphMinimumLineHeight(_ number: CGFloat) -> Attributer {
+    func paragraphMinimumLineHeight(_ number: CGFloat) -> Attributer {
         return attributer.paragraphMinimumLineHeight(number)
     }
     
     /**
      Set the paragraph maximum line height
      */
-    public func paragraphMaximumLineHeight(_ number: CGFloat) -> Attributer {
+    func paragraphMaximumLineHeight(_ number: CGFloat) -> Attributer {
         return attributer.paragraphMaximumLineHeight(number)
     }
     
     /**
      Set the paragraph base writing direction to natural
      */
-    public var paragraphBaseWritingDirectionNatural: Attributer {
+    var paragraphBaseWritingDirectionNatural: Attributer {
         get {
             return attributer.paragraphBaseWritingDirectionNatural
         }
@@ -798,7 +798,7 @@ public extension String {
     /**
      Set the paragraph base writing direction to left to right
      */
-    public var paragraphBaseWritingDirectionLeftToRight: Attributer {
+    var paragraphBaseWritingDirectionLeftToRight: Attributer {
         get {
             return attributer.paragraphBaseWritingDirectionLeftToRight
         }
@@ -807,7 +807,7 @@ public extension String {
     /**
      Set the paragraph base writing direction to right to left
      */
-    public var paragraphBaseWritingDirectionRightToLeft: Attributer {
+    var paragraphBaseWritingDirectionRightToLeft: Attributer {
         get {
             return attributer.paragraphBaseWritingDirectionRightToLeft
         }
@@ -816,25 +816,25 @@ public extension String {
     /**
      Set the paragraph line hight multiple
      */
-    public func paragraphLineHeightMultiple(_ number: CGFloat) -> Attributer {
+    func paragraphLineHeightMultiple(_ number: CGFloat) -> Attributer {
         return attributer.paragraphLineHeightMultiple(number)
     }
     
     /**
      Set the paragraph spacing before
      */
-    public func paragraphSpacingBefore(_ number: CGFloat) -> Attributer {
+    func paragraphSpacingBefore(_ number: CGFloat) -> Attributer {
         return attributer.paragraphSpacingBefore(number)
     }
     
     /**
      Set the paragraph hyphenation factor
      */
-    public func paragraphHyphenationFactor(_ number: Float) -> Attributer {
+    func paragraphHyphenationFactor(_ number: Float) -> Attributer {
         return attributer.paragraphHyphenationFactor(number)
     }
     
-    public var html: Attributer { get {
+    var html: Attributer { get {
             return Attributer(NSMutableAttributedString(html: self) ?? NSMutableAttributedString())
         }
     }

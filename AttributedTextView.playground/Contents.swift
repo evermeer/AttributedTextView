@@ -102,7 +102,7 @@ attributedText = textView1.attributedText // View the details for this -->
 
 
 textView1.attributer = "And here we just do some tests with underline"
-   .underline(.styleDouble, .patternDashDotDot)
+   .underline(.double, .patternDashDotDot)
 attributedText = textView1.attributedText // View the details for this -->
 
 
