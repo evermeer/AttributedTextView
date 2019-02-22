@@ -496,6 +496,7 @@ open class Attributer {
      */
     open func fontName(_ fontName: String) -> Attributer {
         for range in self.ranges {
+            guard range.location != NSNotFound else { return self }
             let substring = self.attributedText.attributedSubstring(from: range)
             if substring.length > 0, let font = substring.attribute(NSAttributedString.Key.font, at: 0, effectiveRange:nil) as? UIFont {
                 if let currentFont = UIFont(name: fontName, size: font.pointSize) {
@@ -517,6 +518,7 @@ open class Attributer {
      */
     open func size(_ size: CGFloat) -> Attributer {
         for range in self.ranges {
+            guard range.location != NSNotFound else { return self }
             let substring = self.attributedText.attributedSubstring(from: range)
             if substring.length > 0, let font = substring.attribute(NSAttributedString.Key.font, at: 0, effectiveRange:nil) as? UIFont {
                 self.attributedText.addAttribute(NSAttributedString.Key.font, value: UIFont(name: font.fontName, size: size)!, range: range)
@@ -550,6 +552,7 @@ open class Attributer {
     @available(*, deprecated, message: "use AttributedTextView with makeInteract: instead")
     open func makeInteractWithURLforScheme(_ scheme: String) -> Attributer {
         for nsRange in self.ranges {
+            guard nsRange.location != NSNotFound else { return self }
             let iRange = self.attributedText.string.range(from: nsRange)
             if let escapedString = self.attributedText.string.substring(with: iRange!).addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlHostAllowed) {
                 self.attributedText.addAttribute(NSAttributedString.Key.link, value: "\(scheme):\(escapedString)", range: nsRange)
@@ -565,6 +568,7 @@ open class Attributer {
      */
     open func makeInteract(_ callback: @escaping ((_ link: String) -> ())) -> Attributer {
         for nsRange in self.ranges {
+            guard nsRange.location != NSNotFound else { return self }
             let unEscapedString = (self.attributedText.string as NSString).substring(with: nsRange)
                 let escapedString = unEscapedString.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlHostAllowed) ?? ""
             self.attributedText.addAttribute(NSAttributedString.Key.link, value: "AttributedTextView:\(escapedString)", range: nsRange)
@@ -1111,6 +1115,7 @@ open class Attributer {
     @discardableResult
     fileprivate func applyAttributes(_ attributeName: String, value: AnyObject) -> Attributer {
         for range in self.ranges {
+            guard range.location != NSNotFound else { return self }
             self.attributedText.addAttribute(NSAttributedString.Key(rawValue: attributeName), value: value, range: range)
         }
         return self
