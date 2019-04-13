@@ -118,6 +118,3 @@ attributedText = textView1.attributedText // View the details for this -->
 
 textView1.attributer = "My name is: <b>Edwin</b><br/>With a bulet list<br/><ul><li>item 1</li><li>item 2</li></ul>".html
 attributedText = textView1.attributedText // View the details for this -->
-
-
-
