@@ -346,18 +346,13 @@ github "evermeer/AttributedTextView" ~> 0.5.1
 ```
 ### Swift Package Manager
 
-To use AttributedTextView as a [Swift Package Manager](https://swift.org/package-manager/) package just add the following in your Package.swift file.
+To use AttributedTextView as a [Swift Package Manager](https://swift.org/package-manager/) package just add the following URL in your project file:
 
-``` swift
-import PackageDescription
-
-let package = Package(
-name: "HelloAttributedTextView",
-dependencies: [
-.Package(url: "https://github.com/evermeer/AttributedTextView.git", "0.5.1")
-]
-)
 ```
+https://github.com/evermeer/AttributedTextView
+```
+
+And specify a version from `1.4.1` and onwards. 
 
 ### Manually
 
